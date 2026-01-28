@@ -1,30 +1,48 @@
 /*
- * Test Results Window Theme (Catppuccin Macchiato)
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * TESTS - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the unit test results window.
  */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Test Results Container
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .test-results {
     -fx-padding: 1em;
     -fx-fill-width: true;
-    -fx-background-color: #1e1e2e; /* Base */
+    -fx-background-color: #1e1e2e;
 }
+
 .test-results .test-results-content {
     -fx-spacing: 0.5em;
-    -fx-background-color: #1e1e2e; /* Base */
+    -fx-background-color: #1e1e2e;
 }
-.test-results > .split-pane {
+
+.test-results>.split-pane {
     -fx-background-insets: 0;
     -fx-padding: 0;
 }
 
-/* Override a rule in JavaFX css which removes border from list-view in split-pane: */
-.test-results > .split-pane > * > .test-names {
+/* ─────────────────────────────────────────────────────────────────────────────
+   Test Names List
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.test-results>.split-pane>*>.test-names {
     -fx-background-insets: 0, 1;
     -fx-padding: 1;
-    -fx-background-color: #181825; /* Crust */
+    -fx-background-color: #181825;
 }
-.test-results > .split-pane > * > .test-names:focused {
+
+.test-results>.split-pane>*>.test-names:focused {
     -fx-background-insets: -1.4, -0.3, 1;
-    -fx-background-color: #45475a; /* Surface1 */
+    -fx-background-color: #45475a;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Counter Panel
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .test-results .counter-panel {
     -fx-padding: 0 2em 0 2em;
@@ -32,7 +50,10 @@
 }
 
 .test-results .counter-panel .label {
-    -fx-text-fill: #cdd6f4; /* Text */
+    -fx-text-fill: #cdd6f4;
+    -fx-max-width: 9999.0;
+    -fx-alignment: baseline-left;
+    -fx-padding: 0.5em 0 0.5em 0;
 }
 
 .test-results .counter-panel .error-panel {
@@ -41,30 +62,39 @@
 }
 
 .test-results .counter-panel .error-panel:bj-non-zero .label {
-    -fx-text-fill: #f38ba8; /* Red */
-}
-.test-results .counter-panel .label {
-    -fx-max-width: 9999.0; /* Allow growth to fill space */
-    -fx-alignment: baseline-left;
-    -fx-padding: 0.5em 0 0.5em 0;
-}
-.test-results .test-progress-bar {
-    -fx-max-width: 9999.0; /* Allow growth to fill width of window */
-    -fx-max-height: 1.75em;
-    -fx-min-height: 1.75em;
-    -fx-accent: #a6e3a1; /* Green */
-}
-.test-results .test-progress-bar:bj-error {
-    -fx-accent: #f38ba8; /* Red */
-}
-.test-results .test-output {
-    -fx-max-height: 9999.0; /* Let it grow to take up available space */
+    -fx-text-fill: #f38ba8;
 }
 
-/* Tooltip on hover */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Progress Bar
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.test-results .test-progress-bar {
+    -fx-max-width: 9999.0;
+    -fx-max-height: 1.75em;
+    -fx-min-height: 1.75em;
+    -fx-accent: #a6e3a1;
+}
+
+.test-results .test-progress-bar:bj-error {
+    -fx-accent: #f38ba8;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Test Output
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.test-results .test-output {
+    -fx-max-height: 9999.0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tooltip
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .test-results-tooltip {
-   -fx-background-color: #313244; /* Surface0 */
-   -fx-text-fill: #cdd6f4; /* Text */
-   -fx-background-radius: 4px;
-   -fx-padding: 5px 8px;
+    -fx-background-color: #313244;
+    -fx-text-fill: #cdd6f4;
+    -fx-background-radius: 4px;
+    -fx-padding: 5px 8px;
 }

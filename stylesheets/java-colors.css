@@ -1,95 +1,120 @@
-/* ░░ SYNTAX TOKEN COLORS ░░ */
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * JAVA SYNTAX COLORS - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Defines syntax highlighting colors for Java code in the BlueJ editor.
+ * Uses a vibrant, high-contrast palette for excellent readability.
+ */
 
-/* Keywords like if, else, for, return, public, etc. */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Keywords & Control Flow
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Keywords: if, else, for, return, public, private, class, etc. */
 .token-keyword1,
 .token-keyword2 {
-    -fx-fill: #89ddff; /* Bright cyan */
+    -fx-fill: #89ddff;
 }
 
-/* Class names, interfaces, and types like String, Scanner, List, etc. */
+/* Type keywords: class names, interfaces (String, Scanner, List, etc.) */
 .token-keyword3 {
-    -fx-fill: #d782e8; /* Lighter violet for class-based types */
+    -fx-fill: #d782e8;
 }
 
-/* Method calls like 'println()' and other functions. */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Methods & Fields
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Method calls: println(), nextInt(), etc. */
 .token-method-call {
-    -fx-fill: #82aaff; /* A distinct, readable blue for methods */
+    -fx-fill: #82aaff;
 }
 
-/* Static fields, most notably 'out' in 'System.out'. */
+/* Static fields: System.out, Integer.MAX_VALUE, etc. */
 .token-static-field {
-    -fx-fill: #8bd5ca; /* Calm mint-teal, same as labels/enums */
+    -fx-fill: #8bd5ca;
 }
 
-/* Comments: inline, block, Javadoc */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Comments
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* All comment types: inline, block, and Javadoc */
 .token-comment-normal,
 .token-comment-javadoc,
 .token-comment-special {
-    -fx-fill: #7f849c; /* Muted lavender-gray — soft but readable */
+    -fx-fill: #7f849c;
 }
 
-/* Primitive types like int, boolean, char, float, long */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Data Types & Literals
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Primitive types: int, boolean, char, float, long, etc. */
 .token-primitive {
-    -fx-fill: #c74de6; /* Vivid violet — distinct and elegant */
+    -fx-fill: #c74de6;
 }
 
-/* String literals like "Hello, world!" */
+/* String literals: "Hello, world!" */
 .token-string-literal {
-    -fx-fill: #9ece6a; /* Soft green, great for visibility */
+    -fx-fill: #9ece6a;
 }
 
-/* Char literals like 'A' and numeric constants like 123, 0xFF */
+/* Char literals and numeric constants: 'A', 123, 0xFF */
 .token-char-literal,
 .token-number {
-    -fx-fill: #f5a97f; /* Warm coral-peach */
+    -fx-fill: #f5a97f;
 }
 
-/* Constants, labels, enums — symbols that are "named and fixed" */
+/* Constants, labels, enums */
 .token-label {
-    -fx-fill: #8bd5ca; /* Calm mint-teal */
+    -fx-fill: #8bd5ca;
 }
 
-/* Invalid or error code (like broken syntax) */
-.token-invalid {
-    -fx-fill: #f7768e; /* Rose pink — clearly wrong but stylish */
-    -fx-underline: true; /* Adds an underline to make errors more obvious */
-}
-
-/* Anything not captured above (default identifiers, names) */
+/* Default text (identifiers, names not otherwise styled) */
 .token-default {
-    -fx-fill: #d9e0ee; /* Smooth off-white — universal readability */
+    -fx-fill: #FFFFFF;
 }
 
- /* ░░ STRUCTURE / UI BACKGROUND COLORS ░░ */
+/* Invalid/error syntax */
+.token-invalid {
+    -fx-fill: #f7768e;
+    -fx-underline: true;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Scope & Block Colors
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .scope-colors {
+    /* Background */
     -bj-background-color: #24152d;
-    /* CLASS BOX */
+
+    /* Class blocks */
     -bj-class-color: #311c36;
     -bj-class-outer-color: #f38ba8;
     -bj-class-inner-color: #1e1e2e;
-    /* METHOD BLOCK */
+
+    /* Method blocks */
     -bj-method-color: #2d3540;
     -bj-method-outer-color: #a6e1a1;
 
-    /* --- ▼▼▼ SELECTION BLOCK (FINAL FIX) ▼▼▼ --- */
-    -bj-selection-color: #3e2e4b; /* Main highlight color */
-    -bj-selection-outer-color: #3e2e4b; /* Ensures a solid, full-line highlight */
+    /* Selection highlighting */
+    -bj-selection-color: #3e2e4b;
+    -bj-selection-outer-color: #3e2e4b;
 
-    /* ITERATION (for/while blocks) */
+    /* Iteration blocks (for/while) */
     -bj-iteration-color: #2b3b3b;
     -bj-iteration-outer-color: #fab387;
-    /* DEBUGGING: BREAKPOINT + STEP */
+
+    /* Debugging overlays */
     -bj-breakpoint-overlay-color: rgba(255, 95, 135, 0.45);
     -bj-step-overlay-color: rgba(173, 255, 174, 0.35);
 }
 
-/* ░░ DEBUGGING / UI INTERACTION COLORS ░░ */
-
-.moe-step-mark-icon {
-    -fx-fill: #a6e3a1;
-    -fx-stroke: #d9e0ee;
-}
+/* ─────────────────────────────────────────────────────────────────────────────
+   Editor Appearance
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .moe-editor-pane {
     -fx-background-color: #262335;
@@ -101,8 +126,15 @@
     -rtfx-background-color: #565f89;
 }
 
+/* Text cursor styling */
 .moe-editor-pane .caret {
-   -fx-stroke: #f9e2af;
-   -fx-stroke-width: 2px;
-   -fx-effect: dropshadow(gaussian, #f9e2af, 6, 0.5, 0, 0);
+    -fx-stroke: #f9e2af;
+    -fx-stroke-width: 2px;
+    -fx-effect: dropshadow(gaussian, #f9e2af, 6, 0.5, 0, 0);
+}
+
+/* Debugging step marker */
+.moe-step-mark-icon {
+    -fx-fill: #a6e3a1;
+    -fx-stroke: #d9e0ee;
 }

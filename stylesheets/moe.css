@@ -1,53 +1,82 @@
 /*
- * MODULARIZED EDITOR (MOE) - THEMED FOR DARK TERMINAL
- * This file controls the main editor pane used by the Terminal.
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * MOE (Modularized Editor) - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Controls the main code editor interface including toolbars, status bar,
+ * line numbers, find panel, and editor pane styling.
  */
 
-.moe-top-bar, .moe-bottom-bar {
-     -fx-background-color: #fdfbd5, #14141c;  /*1e1e2e*/
-    
+/* ─────────────────────────────────────────────────────────────────────────────
+   Toolbar & Status Bar
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.moe-top-bar,
+.moe-bottom-bar {
+    -fx-background-color: #fdfbd5, #14141c;
     -fx-background-insets: 0 0 0 0, 0 0 1 0;
 }
+
 .moe-bottom-bar {
     -fx-background-insets: 0 0 0 0, 1 0 0 0;
 }
+
 .moe-top-bar-buttons {
     -fx-hgap: 0.5em;
 }
-.moe-top-bar-buttons > .button {
+
+.moe-top-bar-buttons>.button {
     -fx-label-padding: 0 0.3em 0 0.3em;
 }
+
 .moe-bottom-status-row {
     -fx-padding: 0.3em 0.5em 0.3em 0.5em;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Status Labels
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .moe-status-label-wrapper {
     -fx-border-style: solid inside;
     -fx-border-color: #414868;
     -fx-border-width: 0 0 0 1;
 }
+
 .moe-status-label-wrapper:bj-status-error {
     -fx-cursor: hand;
 }
+
 .moe-status-label-wrapper .label {
     -fx-font-family: "Source Sans Pro";
     -fx-font-style: italic;
-    -fx-text-fill: #625a77;
+    -fx-text-fill: #a9b1d6;
     -fx-label-padding: 0 8 0 8;
     -fx-text-alignment: center;
     -fx-min-width: 5em;
     -fx-alignment: top-center;
 }
+
 .moe-status-label-wrapper .error-count-label {
     -fx-font-style: normal;
     -fx-text-fill: #ff79c6;
     -fx-underline: true;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Info Panel
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .moe-info {
     -fx-font-family: "Source Sans Pro";
 }
+
 .moe-info-text {
     -fx-fill: #e0dced;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Find Panel
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .moe-find-panel {
     -fx-padding: 0.5em 1em 0.5em 1em;
@@ -57,48 +86,84 @@
     -fx-border-insets: 0 5 0 5;
 }
 
+.moe-find-field {
+    -fx-background-color: #24283b;
+    -fx-text-fill: #c0caf5;
+    -fx-border-color: #414868;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 4px 8px;
+}
+
+.moe-find-field:focused {
+    -fx-border-color: #7aa2f7;
+}
+
+.moe-find-field:bj-no-find-result {
+    -fx-text-fill: #f7768e;
+}
+
+.moe-find-result {
+    -rtfx-background-color: #565f89;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Line Numbers
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .moe-line-label {
     -fx-font-size: 10px;
     -fx-alignment: center-right;
     -fx-graphic-text-gap: 0;
     -fx-label-padding: 0 2 0 0;
-    -fx-background-color: #f6e8b1, #f6e8b1; /*1a1b26*/
+    -fx-background-color: #f6e8b1;
     -fx-text-fill: #565f89;
 }
-.moe-editor-pane:bj-screen .moe-line-label, .moe-editor-pane:bj-printing:bj-line-numbers .moe-line-label {
+
+.moe-editor-pane:bj-screen .moe-line-label,
+.moe-editor-pane:bj-printing:bj-line-numbers .moe-line-label {
     -fx-min-width: 24;
     -fx-pref-width: 24;
     -fx-max-width: 24;
     -fx-background-insets: 0 0 0 0, 0 1 0 0;
 }
+
 .moe-editor-pane:bj-uncompiled .moe-line-label {
-    -fx-background-color: #f6e8b1, derive(#f6e8b1, 15%); /*1a1b26*/
+    -fx-background-color: #f6e8b1, derive(#f6e8b1, 15%);
     -fx-background-insets: -1 0 -1 0, -1 1 -1 0;
 }
+
 .moe-editor-pane:bj-uncompiled .moe-line-label:bj-error {
     -fx-background-color: #f7768e;
 }
-.moe-line-label:bj-breakpoint, .moe-line-label:bj-step-mark {
+
+.moe-line-label:bj-breakpoint,
+.moe-line-label:bj-step-mark {
     -fx-label-padding: 0;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Editor Pane
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .moe-editor-pane {
-    -fx-background-color: #f6e8b1; /*1a1b26*/
+    -fx-background-color: #f6e8b1;
     -fx-caret-blink-rate: 0s;
 }
+
 .moe-background {
-    -fx-background-color: #f6e8b1; /*1a1b26*/
+    -fx-background-color: #f6e8b1;
 }
 
-.moe-code-error {
-    /* Wavy red underline for errors */
-}
-.moe-find-field:bj-no-find-result {
-    -fx-text-fill: #f7768e;
-}
 .moe-editor-pane:bj-screen .moe-bracket-highlight {
     -rtfx-background-color: #565f89;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Debugging Markers
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .moe-step-mark-icon {
     -fx-stroke-width: 1;
     -fx-stroke-type: outside;

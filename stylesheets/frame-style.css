@@ -1,58 +1,75 @@
-/* Define named colours: */
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * FRAME STYLE - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Defines CSS variables for the frame-based editor's color palette.
+ */
+
 .root {
     -fx-font-family: "Source Sans Pro";
 
+    /* Class frames */
     class-frame: #262335;
     class-frame-java: #262335;
     class-comment-focus: #24283b;
     class-comment-text: #565f89;
 
+    /* Interface frames */
     interface-frame: class-frame;
     interface-frame-java: class-frame-java;
     interface-comment-focus: class-comment-focus;
     interface-comment-text: class-comment-text;
 
+    /* Labels */
     triangle-label: #7aa2f7;
 
+    /* Variable frames */
     class-var-frame: #16161e;
     interface-var-frame: #16161e;
 
+    /* If statement frames */
     if-frame: #24283b;
     if-frame-java: #1f2335;
     if-border: #414868;
     if-border-java: #414868;
     if-sidelabel: #7aa2f7;
-    
+
+    /* While loop frames */
     while-frame: #24283b;
     while-frame-java: #1f2335;
     while-border: #414868;
     while-border-java: #414868;
     while-sidelabel: #bb9af7;
-    
+
+    /* Foreach loop frames */
     foreach-frame: #24283b;
     foreach-frame-java: #1f2335;
     foreach-border: #414868;
     foreach-border-java: #414868;
     foreach-sidelabel: #9ece6a;
-    
+
+    /* Try/catch frames */
     try-frame: #24283b;
     try-frame-java: #1f2335;
     try-border: #414868;
     try-border-java: #414868;
     try-sidelabel: #e0af68;
-    
+
+    /* Switch statement frames */
     switch-frame: #24283b;
     switch-frame-java: #1f2335;
     switch-border: #414868;
     switch-border-java: #414868;
     switch-sidelabel: #e0af68;
-    
+
+    /* Debugging */
     breakpoint-frame: #f7768e;
     breakpoint-text: #1a1b26;
     debug-info: #e0af68;
     debug-info-highlight: #f7768e;
     debug-info-text: #1a1b26;
-        
+
+    /* Method frames */
     method-frame: #262335;
     method-frame-java: #262335;
     method-border: #16161e;
@@ -63,15 +80,17 @@
     method-header: #262335;
     method-header-pinned: #16161e;
 
+    /* Frame canvas */
     frame-canvas-empty: #262335;
     frame-canvas-non-empty: #262335;
-    frame:  #262335;
+    frame: #262335;
     frame-border: #262335;
     frame-canvas-border: #414868;
     frame-canvas-border-java: #414868;
     frame-stack-border: #e0af68;
     frame-drag-border: #7aa2f7;
-    
+
+    /* Focused slots */
     focused-slot: #24283b;
     text-slot-prompt-text: #565f89;
 }

@@ -1,54 +1,55 @@
 /*
- * Editor Menu Bar & Dropdown Menu Styling
- * Applies a dark background and light text for high visibility.
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR MENU BAR - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the editor menu bar and dropdown menus.
  */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Menu Bar
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .editor-menubar {
     -fx-font-size: 15;
     -fx-font-family: System;
-    -fx-background-color: #1e1e2e; /* Base dark background for the top menu bar */
+    -fx-background-color: #1e1e2e;
 }
 
-/* Style for the top-level menu bar labels (e.g., "File", "Edit") */
 .editor-menubar .label {
     -fx-text-fill: #cdd6f4;
 }
 
-/*
- * General style for all dropdown menus (context menus).
- * This ensures the dropdown itself has the dark theme.
- */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Dropdown Menus
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .context-menu {
-    -fx-background-color: #2c2f41; /* Dark background for the dropdown */
+    -fx-background-color: #2c2f41;
     -fx-border-color: #414868;
     -fx-border-width: 1px;
     -fx-background-radius: 6px;
     -fx-border-radius: 6px;
 }
 
-/*
- * Default style for all individual menu items (in dropdowns).
- * This is the key fix: ensures text is visible by default.
- */
 .menu-item .label {
-    -fx-text-fill: #cdd6f4; /* Light, soft text color for readability */
+    -fx-text-fill: #cdd6f4;
 }
 
-/*
- * Hover/Focus Effect for Menu Items.
- * Changes background and text color on hover for clear visual feedback.
- */
 .menu-item:focused,
 .menu-item:hover {
-    -fx-background-color: #414868; /* Lighter background for selection/hover */
+    -fx-background-color: #414868;
     -fx-background-radius: 4px;
 }
 
 .menu-item:focused .label,
 .menu-item:hover .label {
-    -fx-text-fill: #d9e0ee; /* Slightly brighter text on hover */
+    -fx-text-fill: #d9e0ee;
 }
 
-/* Style for the line numbers context menu, inheriting general styles */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Line Numbers Context Menu
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .line-numbers-context-menu {
     -fx-font-size: 15;
     -fx-font-family: System;

@@ -1,18 +1,29 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR SLOT CHOICE - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for choice/dropdown slots in the frame-based editor.
+ */
+
 .choice-current {
-    -fx-color: #c0caf5; /* Standard text color */
+    -fx-color: #c0caf5;
 }
+
 .choice-future {
-    -fx-text-fill: #565f89; /* Muted color for placeholder */
+    -fx-text-fill: #565f89;
     -fx-label-padding: 0 2 0 0;
 }
+
 .choice-dummy {
     -fx-background-color: transparent;
     -fx-border-width: 0;
 }
+
 .choice {
     -fx-background-radius: 4;
     -fx-border-radius: 4;
 }
+
 .choice-empty {
     -fx-background-color: #16161e;
 }

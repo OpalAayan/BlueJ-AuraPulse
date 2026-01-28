@@ -1,57 +1,76 @@
-.root {
-    class-target: #2e1a47;     /* Deep royal plum */
-    test-target: #bb9af7;      /* Lavender pink for unit tests */
-    css-target: #b48ead;       /* Aesthetic Pink */
-    text-target-bg: #e0af68;   /* Muted Yellow Orange */
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * PACKAGE MANAGER FRAME - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the main BlueJ project window including class diagram, package
+ * navigation, object bench, code pad, and VM status indicators.
+ */
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Theme Variables
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.root {
+    /* Class target colors */
+    class-target: #2e1a47;
+    test-target: #bb9af7;
+    css-target: #b48ead;
+    text-target-bg: #e0af68;
+
+    /* Background colors */
     window-background: #1a1b26;
     class-diagram: #100b15;
     object-bench: class-diagram;
     codepad: class-diagram;
     codepad-input: #414868;
-    pane-border-color: #a9b1d6; /* Soft steel for outlines */
+    pane-border-color: #a9b1d6;
 }
 
-
-
-/* ───────────────────────────────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────────────────────────────────────
    Project Window & Layout
-──────────────────────────────────────────────────────────────────────────────── */
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .pmf-root {
     -fx-padding: 10px 10px 4px 10px;
     -fx-background-color: window-background;
 }
+
 .split-pane {
     -fx-padding: 0;
     -fx-background-insets: 20;
     -fx-background-color: window-background;
 }
-.split-pane > .split-pane-divider {
+
+.split-pane>.split-pane-divider {
     -fx-border-color: window-background;
     -fx-background-color: window-background;
     -fx-padding: 2px;
 }
+
 .pmf-central-pane {
     -fx-border-width: 1;
     -fx-border-color: pane-border-color;
 }
-.pmf-empty-project-msg, .pmf-no-classes-msg {
+
+.pmf-empty-project-msg,
+.pmf-no-classes-msg {
     -fx-text-fill: #565f89;
     -fx-font-size: 14pt;
 }
 
-/* ───────────────────────────────────────────────────────────────────────────────
-   Triangle, Tools, and Buttons
-──────────────────────────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Triangle & Tool Buttons
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .triangle-arrow {
     -fx-cursor: hand;
     -fx-fill: #c0caf5;
 }
+
 .triangle-arrow:hover {
     -fx-fill: derive(#c0caf5, 20%);
 }
+
 .pmf-triangle-foldout-wrapper:bj-hover-long {
     -fx-background-color: #c0caf5;
     -fx-cursor: hand;
@@ -66,54 +85,65 @@
     -fx-padding: 0 0 8px 0;
     -fx-alignment: center;
 }
-.pmf-tools, .pmf-tools-top, .pmf-tools-team-items, .pmf-tools-test-items {
+
+.pmf-tools,
+.pmf-tools-top,
+.pmf-tools-team-items,
+.pmf-tools-test-items {
     -fx-spacing: 8px;
     -fx-fill-width: true;
     -fx-max-width: 130px;
 }
+
 .pmf-tools .button {
     -fx-padding: 0.333333em;
     -fx-max-width: 9999;
 }
-.pmf-tools > .titled-pane > .content > * {
+
+.pmf-tools>.titled-pane>.content>* {
     -fx-padding: 0;
 }
-.pmf-tools-top, .pmf-tools > .titled-pane > .content {
+
+.pmf-tools-top,
+.pmf-tools>.titled-pane>.content {
     -fx-padding: 8px;
 }
 
-.pmf-tools-test > .title, .pmf-tools-team > .title {
+.pmf-tools-test>.title,
+.pmf-tools-team>.title {
     -fx-padding: 0.333em 0.75em 0em 0;
     -fx-background-color: transparent;
 }
-.pmf-tools-test > .title > .text, .pmf-tools-team > .title > .text {
+
+.pmf-tools-test>.title>.text,
+.pmf-tools-team>.title>.text {
     -fx-fill: #c0caf5;
     -fx-font-weight: bold;
 }
-.pmf-tools-test > .content, .pmf-tools-team > .content {
+
+.pmf-tools-test>.content,
+.pmf-tools-team>.content {
     -fx-border-width: 0;
     -fx-background-color: window-background;
 }
 
-/* ───────────────────────────────────────────────────────────────────────────────
-   Machine Status
-──────────────────────────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Machine Status (VM Indicator)
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .machine-icon-container {
     -fx-min-width: 160px;
     -fx-alignment: center;
     -fx-spacing: 3px;
 }
+
 .machine-icon-bar-holder {
     -fx-border-width: 1;
     -fx-border-style: solid inside;
     -fx-border-color: #414868;
     -fx-border-radius: 4;
 }
-.machine-icon-bar:bj-active {
-    -fx-stroke: #7aa2f7;
-    -fx-fill: #414868;
-}
+
 .machine-icon-bar {
     -fx-arc-height: 6;
     -fx-arc-width: 6;
@@ -122,24 +152,34 @@
     -fx-fill: transparent;
     -fx-stroke-type: inside;
 }
+
+.machine-icon-bar:bj-active {
+    -fx-stroke: #7aa2f7;
+    -fx-fill: #414868;
+}
+
 .reset-vm-button {
     -fx-padding: 3 5 0 5;
 }
+
 .reset-vm-button:bj-no-hover {
     -fx-background-color: transparent, transparent, transparent, transparent;
 }
+
 .reset-vm-button-arrow {
     -fx-stroke-width: 2;
     -fx-stroke: #565f89;
 }
 
-/* ───────────────────────────────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────────────────────────────────────
    Class Diagram
-──────────────────────────────────────────────────────────────────────────────── */
+   ───────────────────────────────────────────────────────────────────────────── */
 
-.class-diagram, .package-target-preview {
+.class-diagram,
+.package-target-preview {
     -fx-background-color: class-diagram;
 }
+
 .class-diagram:bj-drawing-extends {
     -fx-background-color: derive(class-diagram, -15%);
 }
@@ -147,87 +187,121 @@
 .package-target-preview-wrapper {
     -fx-padding: 5;
 }
+
 .package-target-preview {
     -fx-opacity: 0.7;
     -fx-border-width: 0.5;
     -fx-border-color: #c0caf5;
     -fx-border-style: solid outside;
 }
-.class-target, .package-target, .package-target-preview-item {
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Class & Package Targets
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.class-target,
+.package-target,
+.package-target-preview-item {
     -fx-border-width: 1;
     -fx-border-color: #414868;
     -fx-border-style: solid outside;
 }
 
-/*
- * ▼▼▼ UPDATED FILE COLORS ▼▼▼
- */
-.css-target {
-    -fx-background-color: css-target;
-    -fx-border-color: #414868;
-}
-.css-target .label {
-    -fx-text-fill: #1a1b26; /* Dark text for pink background */
-}
-
-.text-target {
-    -fx-background-color: text-target-bg;
-    -fx-border-color: #414868;
-}
-.text-target .label {
-    -fx-text-fill: #1a1b26; /* Dark text for yellow background */
-}
-.text-target .icon {
-    -fx-fill: #1a1b26;
-}
-/* ▲▲▲ END FIX ▲▲▲ */
-
-
-.class-target, .class-target:bj-resizing, .class-target:bj-resizing:hover, .package-target-preview-item {
+.class-target,
+.class-target:bj-resizing,
+.class-target:bj-resizing:hover,
+.package-target-preview-item {
     -fx-background-color: class-target;
 }
+
 .class-target:hover {
     -fx-background-color: derive(class-target, 25%);
 }
+
 .class-target:bj-unittest {
     -fx-background-color: test-target;
     -fx-text-fill: #1a1b26;
 }
+
 .class-target:bj-unittest:hover {
     -fx-background-color: derive(test-target, 25%);
 }
-.class-target:bj-selected, .package-target:bj-selected, .css-target:bj-selected, .text-target:bj-selected {
+
+.class-target:bj-selected,
+.package-target:bj-selected,
+.css-target:bj-selected,
+.text-target:bj-selected {
     -fx-border-color: #7aa2f7;
     -fx-border-width: 2;
 }
+
 .class-target-name {
     -fx-border-width: 0 0 1 0;
     -fx-border-color: #414868;
     -fx-text-fill: #c0caf5;
 }
-.class-target-name, .package-target-name {
+
+.class-target-name,
+.package-target-name {
     -fx-font-weight: bold;
     -fx-alignment: center;
     -fx-font-size: 10pt;
 }
+
 .class-target-extra {
     -fx-alignment: center;
     -fx-font-size: 8pt;
     -fx-text-fill: #c0caf5;
 }
 
-.class-action-inbuilt > .label, .object-action-inbuilt > .label {
-    -fx-text-fill: #f38ba8;
-}
-.object-action-inbuilt > .label {
-    -fx-font-style: italic;
+/* Package (folder) styling */
+.package-target {
+    -fx-background-color: #3d3f6e;
 }
 
-.marquee {
-    -fx-stroke-width: 2;
-    -fx-stroke: #7aa2f7;
-    -fx-stroke-type: outside;
-    -fx-fill: rgba(65, 72, 104, 0.3);
+.package-target:hover {
+    -fx-background-color: derive(#3d3f6e, 25%);
+}
+
+.package-target-name {
+    -fx-text-fill: #c0caf5;
+}
+
+/* CSS file targets */
+.css-target {
+    -fx-background-color: css-target;
+    -fx-border-color: #414868;
+}
+
+.css-target .label {
+    -fx-text-fill: #1a1b26;
+}
+
+/* Text file targets */
+.text-target {
+    -fx-background-color: text-target-bg;
+    -fx-border-color: #414868;
+}
+
+.text-target .label {
+    -fx-text-fill: #1a1b26;
+}
+
+.text-target .icon {
+    -fx-fill: #1a1b26;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Built-in Actions & Context Menu
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.class-action-inbuilt>.label,
+.object-action-inbuilt>.label {
+    -fx-text-fill: #f38ba8;
+}
+
+.object-action-inbuilt>.label {
+    -fx-font-style: italic;
 }
 
 .context-menu {
@@ -244,14 +318,31 @@
     -fx-text-fill: #cdd6f4;
 }
 
-.menu-item:focused, .menu-item:hover {
+.menu-item:focused,
+.menu-item:hover {
     -fx-background-color: #414868;
     -fx-background-radius: 4px;
 }
 
-.menu-item:focused .label, .menu-item:hover .label {
+.menu-item:focused .label,
+.menu-item:hover .label {
     -fx-text-fill: #f8f8f2;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Marquee Selection
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.marquee {
+    -fx-stroke-width: 2;
+    -fx-stroke: #7aa2f7;
+    -fx-stroke-type: outside;
+    -fx-fill: rgba(65, 72, 104, 0.3);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Extends Tip & Relationship Arrows
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .pmf-create-extends-tip {
     -fx-background-color: #16161e;
@@ -260,64 +351,107 @@
     -fx-background-radius: 4px;
 }
 
-.relation-arrow-uses .line {
-    -fx-stroke: #f9e2af;
+/* Uses relationship arrows (dashed) */
+.relation-arrow-uses .line,
+.relation-arrow-uses Line {
+    -fx-stroke: #7dcfff;
     -fx-stroke-dash-array: 4 4;
-}
-.relation-arrow-extends .line {
-    -fx-stroke: #f9e2af;
-}
-.relation-arrow .arrow-head {
-    -fx-stroke: #f9e2af;
-    -fx-fill: #f9e2af;
+    -fx-stroke-width: 2;
 }
 
-/* ───────────────────────────────────────────────────────────────────────────────
-   Object Bench & Code Pad
-──────────────────────────────────────────────────────────────────────────────── */
+/* Extends relationship arrows (solid) */
+.relation-arrow-extends .line,
+.relation-arrow-extends Line {
+    -fx-stroke: #7dcfff;
+    -fx-stroke-width: 2;
+}
+
+/* Arrow heads */
+.relation-arrow .arrow-head,
+.relation-arrow Polygon,
+.relation-arrow Polyline {
+    -fx-stroke: #7dcfff;
+    -fx-fill: #7dcfff;
+}
+
+/* Generic line styling for class diagram */
+.class-diagram Line {
+    -fx-stroke: #7dcfff;
+    -fx-stroke-width: 2;
+}
+
+.class-diagram Polygon,
+.class-diagram Polyline {
+    -fx-stroke: #7dcfff;
+    -fx-fill: #7dcfff;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Object Bench
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .object-bench {
     -fx-border-width: 1;
     -fx-border-color: pane-border-color;
+    -fx-background-color: #16161e;
 }
-.object-bench > .viewport, .object-bench-panel {
-    -fx-background-color: object-bench;
+
+.object-bench>.viewport,
+.object-bench-panel,
+.object-bench .scroll-pane,
+.object-bench .scroll-pane>.viewport {
+    -fx-background-color: #16161e;
 }
+
 .object-bench-panel {
     -fx-padding: 0 12px 0 0;
+    -fx-background-color: #16161e;
 }
+
 .object-wrapper {
     -fx-padding: 5px;
 }
+
 .object-wrapper-text {
     -fx-text-fill: #c0caf5;
     -fx-text-alignment: center;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Code Pad
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .codepad {
     -fx-border-width: 1;
     -fx-border-color: pane-border-color;
 }
+
 .codepad-history {
     -fx-min-height: 50;
     -fx-background-color: codepad;
 }
+
 .codepad-row {
     -fx-text-fill: #cdd6f4;
     -fx-wrap-text: false;
     -fx-background-color: codepad;
     -fx-padding: 4px 0 0 10px;
 }
+
 .codepad-row:selected {
     -fx-background-color: #45475a;
 }
+
 .codepad-row:bj-codepad-error {
     -fx-text-fill: #f38ba8;
 }
+
 .codepad-row:bj-codepad-output {
     -fx-text-fill: #a6e3a1;
 }
-.codepad-row:bj-codepad-error, .codepad-row:bj-codepad-output {
+
+.codepad-row:bj-codepad-error,
+.codepad-row:bj-codepad-output {
     -fx-padding: 0 0 0 10px;
     -fx-graphic-text-gap: 10px;
 }
@@ -330,9 +464,11 @@
     -fx-border-width: 1 0 0 0;
     -fx-border-color: #45475a;
 }
+
 .codepad .text-field:focused {
     -fx-background-color: #1e1e2e, #313244;
 }
+
 .codepad-add-object-arrow {
     -fx-stroke: rgba(247, 118, 142, 0.8);
     -fx-stroke-width: 6;

@@ -1,12 +1,25 @@
-.error-fix-display, .suggested-followup-pane {
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR ERROR FIX - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for error fix suggestions and follow-up action panels.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Error Fix Display Panel
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.error-fix-display,
+.suggested-followup-pane {
     -fx-border-color: #f7768e;
-    -fx-background-color: rgba(36, 40, 59, 0.9); /* #24283b */
+    -fx-background-color: rgba(36, 40, 59, 0.9);
     -fx-background-radius: 6;
     -fx-border-radius: 6;
     -fx-padding: 8px;
 }
 
-.error-fix-display .label, .suggested-followup-pane .label {
+.error-fix-display .label,
+.suggested-followup-pane .label {
     -fx-text-fill: #c0caf5;
 }
 
@@ -24,16 +37,20 @@
     -fx-background-radius: 4px;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Suggested Follow-up Panel
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .suggested-followup-pane {
     -fx-max-width: 300;
     -fx-spacing: 0.5em;
 }
 
-.suggested-followup-pane > .label {
+.suggested-followup-pane>.label {
     -fx-max-width: 290;
     -fx-wrap-text: true;
 }
 
-.suggested-followup-pane > .suggested-followup-hbox {
+.suggested-followup-pane>.suggested-followup-hbox {
     -fx-spacing: 1em;
 }

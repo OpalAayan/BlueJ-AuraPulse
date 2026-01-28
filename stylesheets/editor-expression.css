@@ -1,8 +1,22 @@
-.expression-operator, .expression-bracket, .expression-slot-field {
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR EXPRESSION - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for expression slots in the frame-based editor.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Cursor States
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.expression-operator,
+.expression-bracket,
+.expression-slot-field {
     -fx-cursor: text;
 }
 
-.expression-operator:bj-java-preview, .expression-bracket:bj-java-preview {
+.expression-operator:bj-java-preview,
+.expression-bracket:bj-java-preview {
     -fx-cursor: default;
 }
 
@@ -10,15 +24,12 @@
     -fx-cursor: hand;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Operator Spacing
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .expression-operator {
     -fx-label-padding: 0 0 0 0;
-}
-
-.expression-bracket {
-    -fx-label-padding: 0 -2 0 -2;
-}
-.expression-bracket-opening {
-    -fx-text-alignment: right; /* Needed during animation to Java preview */
 }
 
 .expression-operator:bj-op-dot {
@@ -41,24 +52,44 @@
     -fx-label-padding: 0 0 0 -0.2em;
 }
 
-.expression-operator:bj-op-high:bj-java-preview, .expression-operator:bj-op-medium:bj-java-preview, .expression-operator:bj-op-low:bj-java-preview {
+.expression-operator:bj-op-high:bj-java-preview,
+.expression-operator:bj-op-medium:bj-java-preview,
+.expression-operator:bj-op-low:bj-java-preview {
     -fx-label-padding: 0 5 0 5;
 }
 
-.expression-slot-field {
-   -fx-prompt-text-fill: #565f89;
+/* ─────────────────────────────────────────────────────────────────────────────
+   Brackets
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.expression-bracket {
+    -fx-label-padding: 0 -2 0 -2;
+}
+
+.expression-bracket-opening {
+    -fx-text-alignment: right;
 }
 
 .expression-bracket:bj-bracket-highlight {
-   -fx-font-weight: bold;
-   -fx-text-fill: #7aa2f7;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7aa2f7;
 }
 
-.expression-slot-field, .expression-slot-field:disabled {
-   -fx-text-fill: #c0caf5;
-   -fx-opacity: 1.0;
+/* ─────────────────────────────────────────────────────────────────────────────
+   Slot Fields & Literals
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.expression-slot-field {
+    -fx-prompt-text-fill: #565f89;
 }
 
-.expression-string-literal, .expression-string-literal-quote {
-   -fx-text-fill: #9ece6a;
+.expression-slot-field,
+.expression-slot-field:disabled {
+    -fx-text-fill: #c0caf5;
+    -fx-opacity: 1.0;
+}
+
+.expression-string-literal,
+.expression-string-literal-quote {
+    -fx-text-fill: #9ece6a;
 }

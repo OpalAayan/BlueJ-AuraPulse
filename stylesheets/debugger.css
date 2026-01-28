@@ -1,35 +1,62 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * DEBUGGER - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the debugger window and controls.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Variable Display
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .debugger-var-cell {
     -fx-spacing: 0.4em;
     -fx-alignment: center-left;
 }
-.debugger-var-cell > .debugger-var-name {
+
+.debugger-var-cell>.debugger-var-name {
     -fx-font-weight: bold;
 }
-.debugger-stack, .debugger-var-cell {
+
+.debugger-stack,
+.debugger-var-cell {
     -fx-font-family: "Source Sans Pro";
     -fx-text-fill: #c0caf5;
 }
+
 .debugger-var-object-ref {
     -fx-cursor: hand;
     -fx-text-fill: #7aa2f7;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Sections & Layout
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .debugger-section {
     -fx-padding: 0.5em;
     -fx-background-color: #16161e;
 }
+
 .debugger-section .label {
     -fx-text-fill: #c0caf5;
 }
+
 .debugger-static-var-list {
     -fx-max-height: 9em;
 }
+
 .debugger-thread-combo {
-    -fx-max-width: 800px; /* Let it expand to fill space, up to a point */
+    -fx-max-width: 800px;
 }
+
 .debugger .split-pane {
-    /* Remove outer border */
     -fx-background-color: #262335, #262335;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Control Icons
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .debugger .terminate-icon {
     -fx-stroke: #262335;
@@ -37,15 +64,25 @@
     -fx-stroke-width: 1;
     -fx-fill: #f7768e;
 }
+
 .debugger .step-icon {
     -fx-alignment: center;
 }
-.debugger .step-icon-arrow, .debugger .step-icon-bar, .debugger .continue-icon-arrow, .debugger .step-into-icon {
+
+.debugger .step-icon-arrow,
+.debugger .step-icon-bar,
+.debugger .continue-icon-arrow,
+.debugger .step-into-icon {
     -fx-stroke: #262335;
     -fx-stroke-type: inside;
     -fx-stroke-width: 1;
     -fx-fill: #9ece6a;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Button Panel
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .debugger .debugger-buttons {
     -fx-hgap: 1em;
     -fx-vgap: 1em;
@@ -54,6 +91,7 @@
     -fx-border-color: #414868;
     -fx-border-width: 1 0 0 0;
 }
+
 .debugger .debugger-buttons .button {
     -fx-max-width: 9999;
     -fx-max-height: 9999;

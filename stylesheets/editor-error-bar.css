@@ -1,9 +1,24 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR ERROR BAR - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the error overview bar in the editor (right-side scrollbar area).
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Error Bar Container
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .error-overview-bar-pane {
     -fx-min-width: 15px;
     -fx-border-width: 0 0 0 1px;
     -fx-border-color: #414868;
     -fx-background-color: #1a1b26;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Status Indicators
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .error-overview-bar-status {
     -fx-font-size: 14px;
@@ -12,25 +27,30 @@
 }
 
 .error-overview-bar-status:bj-success {
-    -fx-text-fill: #9ece6a; /* Green */
+    -fx-text-fill: #9ece6a;
     -fx-cursor: default;
 }
 
 .error-overview-bar-status:bj-failure {
-    -fx-text-fill: #f7768e; /* Red */
+    -fx-text-fill: #f7768e;
     -fx-cursor: hand;
 }
 
 .error-overview-bar-status:bj-editing {
-    -fx-text-fill: #e0af68; /* Yellow */
+    -fx-text-fill: #e0af68;
     -fx-cursor: default;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Error Markers
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .error-overview-error {
-    -fx-fill: rgba(247, 118, 142, 0.7); /* Transparent Red */
+    -fx-fill: rgba(247, 118, 142, 0.7);
     -fx-stroke: #f7768e;
     -fx-cursor: hand;
 }
+
 .error-overview-error:bj-showing {
     -fx-fill: #f7768e;
 }

@@ -1,67 +1,126 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * TERMINAL - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the BlueJ terminal/console window where program output appears.
+ */
 
-.terminal .virtual-flow {
-    -fx-gravity: rear;
+/* ─────────────────────────────────────────────────────────────────────────────
+   Terminal Container & Layout
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.terminal,
+.terminal-error {
     -fx-background-color: #262335;
-
 }
 
 .terminal-split {
     -fx-orientation: vertical;
     -fx-background-color: #262335;
-
 }
+
+.terminal .virtual-flow {
+    -fx-gravity: rear;
+    -fx-background-color: #262335;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Output & Input Areas
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .terminal-output {
     -fx-fill: rgb(0, 0, 0);
     -fx-background-color: #191521;
     -fx-cursor: text;
 }
+
 .terminal-input {
     -fx-fill: #4317bb;
     -fx-background-color: #262335;
-
-}
-.terminal-method-record {
-    -fx-fill: rgb(254, 4, 100);
-    -fx-background-color: #262335;
-
-}
-.terminal-error {
-    -fx-fill: red;
-    -fx-background-color: rgb(255, 99, 185);
-    -fx-cursor: text;
-    -fx-background-color: #262335;
-
-}
-.terminal-output .flow-selection, .terminal-error .flow-selection {
-    -fx-fill: hsb(211, 50%, 90%);
-    -fx-stroke: null;
-    -fx-background-color: #262335;
-
-}
-.terminal-stack-link {
-    -fx-fill: rgb(255, 96, 96);
-    -fx-underline: true;
-    -fx-cursor: hand;
-    -fx-background-color: #262335;
-
-}
-.terminal-stack-foreign {
-    -fx-fill: hsb(0, 0%, 70%);
-    -fx-background-color: #262335;
-
 }
 
-/* Show prompt text even when we are focused: */
 .terminal-input-field {
     -fx-prompt-text-fill: #ffd700;
     -fx-background-color: #262335;
     -fx-text-fill: rgb(240, 130, 255);
     -fx-stroke-width: 6px;
-
 }
 
-/* Slightly darker than white to make input field stand out: */
-.terminal, .terminal-error {
-    -fx-background-color: rgb(207, 207, 207);
+/* ─────────────────────────────────────────────────────────────────────────────
+   Method Records & Errors
+   ───────────────────────────────────────────────────────────────────────────── */
 
+.terminal-method-record {
+    -fx-fill: rgb(254, 4, 100);
+    -fx-background-color: #262335;
+}
+
+.terminal-error {
+    -fx-fill: red;
+    -fx-cursor: text;
+    -fx-background-color: #262335;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Stack Trace Links
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.terminal-stack-link {
+    -fx-fill: rgb(255, 96, 96);
+    -fx-underline: true;
+    -fx-cursor: hand;
+    -fx-background-color: #262335;
+}
+
+.terminal-stack-foreign {
+    -fx-fill: hsb(0, 0%, 70%);
+    -fx-background-color: #262335;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Text Selection
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.terminal-output .flow-selection,
+.terminal-error .flow-selection {
+    -fx-fill: hsb(211, 50%, 90%);
+    -fx-stroke: null;
+    -fx-background-color: #262335;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Scroll Pane & Viewport (Fix white background)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.terminal .scroll-pane {
+    -fx-background-color: #262335;
+    -fx-background: #262335;
+}
+
+.terminal .scroll-pane>.viewport {
+    -fx-background-color: #262335;
+}
+
+.terminal .scroll-pane>.viewport>* {
+    -fx-background-color: #262335;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Content Containers
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.terminal .content {
+    -fx-background-color: #262335;
+}
+
+.terminal Region {
+    -fx-background-color: #262335;
+}
+
+.terminal TextFlow {
+    -fx-background-color: #262335;
+}
+
+.terminal Pane {
+    -fx-background-color: #262335;
 }

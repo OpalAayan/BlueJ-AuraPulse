@@ -1,3 +1,14 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR HELP - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for keyboard help panels and frame tooltips.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Keyboard Help Panel
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .frame-editor-key-help-pane {
    -fx-background-color: #16161e;
    -fx-background-radius: 10;
@@ -20,13 +31,18 @@
    -fx-alignment: center;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Frame Tooltips
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .frame-tooltip {
    -fx-text-fill: #c0caf5;
    -fx-background-color: rgba(22, 22, 30, 0.9);
    -fx-background-radius: 10;
    -fx-padding: 10 10 10 10;
 }
+
 .frame-tooltip:bj-tight-border {
-    -fx-background-radius: 5;
+   -fx-background-radius: 5;
    -fx-padding: 5;
 }

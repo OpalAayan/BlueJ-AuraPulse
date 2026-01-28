@@ -1,34 +1,62 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * FLOW EDITOR - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the Flow editor component including margins, line numbers,
+ * cursor, text selection, and bracket matching.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Top Bar
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .flow-top-bar {
     -fx-padding: 0.75em 1em 0.75em 1em;
     -fx-background-color: #16161e, #1f2335;
     -fx-background-insets: 0 0 0 0, 0 0 1 0;
 }
+
 .flow-top-bar-buttons {
     -fx-hgap: 0.5em;
 }
-.flow-top-bar-buttons > .button {
+
+.flow-top-bar-buttons>.button {
     -fx-label-padding: 0 0.3em 0 0.3em;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Editor Lines & Margins
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .margin-and-text-line {
     -fx-background-color: #262335;
     -fx-cursor: text;
 }
+
 .flow-margin-line {
     -fx-stroke: #414868;
 }
+
 .flow-margin-background {
     -fx-background-color: #262335;
     -fx-cursor: default;
 }
+
 .margin-and-text-line:bj-margin-uncompiled .flow-margin-background {
     -fx-background-color: #1f2335;
 }
+
 .margin-and-text-line:bj-margin-error .flow-margin-background {
     -fx-background-color: #5d2b3c;
 }
-.moe-breakpoint-icon, .moe-step-mark-icon {
-    -fx-cursor: default;
+
+.line-container {
+    -fx-background-color: #262335;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Line Numbers
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .flow-line-label {
     -fx-font-size: 10px;
@@ -38,22 +66,70 @@
     -fx-text-fill: #565f89;
     -fx-cursor: default;
 }
+
 .margin-and-text-line:bj-margin-error .flow-line-label {
     -fx-text-fill: #f7768e;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Text Cursor (Caret)
+   ───────────────────────────────────────────────────────────────────────────── */
+/* --- For I beam --- */
+.flow-caret {
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 2px;
+    -fx-stroke-line-cap: square;
+    -fx-effect: dropshadow(three-pass-box, #89ddff, 15, 0.6, 0, 0);
+}
+
+/* --- For Underline ---*/
+/* .flow-caret {
+    -fx-stroke-width: 16px; 
+    -fx-stroke-line-cap: butt;
+    -fx-stroke: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0) 92%, 
+        #F7AFFF 90%,   
+        #F7AFFF 100%   
+    );
+  -fx-effect: dropshadow(three-pass-box, rgba(203, 166, 247, 0.7), 12, 0.3, 0, 0);
+} */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Text Selection & Highlighting
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .text-line .flow-selection {
     -fx-fill: #414868;
     -fx-stroke: null;
 }
+
 .text-line .flow-find-result {
     -fx-fill: #565f89;
     -fx-stroke: null;
 }
+
 .text-line .flow-bracket-match {
     -fx-fill: #7aa2f7;
     -fx-stroke: null;
 }
 
-.line-container {
-    -fx-background-color: #262335;
+/* ─────────────────────────────────────────────────────────────────────────────
+   Debugging Markers
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.moe-breakpoint-icon,
+.moe-step-mark-icon {
+    -fx-cursor: default;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Base Text Color
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Default text color for non-syntax-highlighted files (CSS, text, etc.)
+   Overridden by token-* classes in java-colors.css for Java files */
+.text-line Text {
+    -fx-fill: #FFFFFF;
 }

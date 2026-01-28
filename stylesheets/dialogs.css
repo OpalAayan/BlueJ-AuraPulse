@@ -1,7 +1,456 @@
-Shared */
+/* ╔═══════════════════════════════════════════════════════════════════════════╗
+   ║          BLUEJ DIALOGS - DARK PURPLE THEME (AuraPulse)                   ║  
+   ╠═══════════════════════════════════════════════════════════════════════════╣
+   ║  Theme Colors:                                                            ║
+   ║    Background:  #1e1e2e (deep purple-gray)                               ║
+   ║    Surface:     #24283b (slightly lighter)                               ║
+   ║    Text:        #c0caf5 (soft lavender-white)                            ║
+   ║    Muted Text:  #565f89 (dimmed purple-gray)                             ║
+   ║    Accent:      #7aa2f7 (calm blue)                                      ║
+   ║    Error:       #f7768e (rose pink)                                      ║
+   ║    Success:     #a6e3a1 (mint green)                                     ║
+   ║    Border:      #414868 (subtle purple-gray)                             ║
+   ╚═══════════════════════════════════════════════════════════════════════════╝ */
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                         ROOT THEME VARIABLES                                */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.root {
+    -fx-base: #1e1e2e;
+    -fx-background: #1e1e2e;
+    -fx-control-inner-background: #24283b;
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, -2%);
+    -fx-accent: #7aa2f7;
+    -fx-focus-color: #7aa2f7;
+    -fx-faint-focus-color: transparent;
+    -fx-text-base-color: #c0caf5;
+    -fx-text-fill: #c0caf5;
+    -fx-light-text-color: #c0caf5;
+    -fx-mid-text-color: #a9b1d6;
+    -fx-dark-text-color: #c0caf5;
+    -fx-mark-color: #c0caf5;
+    -fx-mark-highlight-color: derive(-fx-mark-color, 20%);
+    -fx-box-border: #414868;
+    -fx-shadow-highlight-color: transparent;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                          DIALOG PANE (MAIN CONTAINER)                       */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.dialog-pane {
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: #565f89;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.dialog-pane>.content {
+    -fx-background-color: #1e1e2e;
+    -fx-padding: 1em;
+}
+
+.dialog-pane>.button-bar {
+    -fx-background-color: #24283b;
+    -fx-padding: 0.8em;
+}
+
+.dialog-pane>.button-bar>.container {
+    -fx-background-color: transparent;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #24283b;
+    -fx-padding: 0.8em 1em;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #c0caf5;
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                               BUTTONS                                        */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.button {
+    -fx-background-color: #414868;
+    -fx-text-fill: #c0caf5;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 0.5em 1.2em;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #565f89;
+}
+
+.button:focused {
+    -fx-border-color: #7aa2f7;
+    -fx-border-width: 2px;
+    -fx-background-insets: 2;
+}
+
+.button:pressed {
+    -fx-background-color: #7aa2f7;
+    -fx-text-fill: #1e1e2e;
+}
+
+.button:default {
+    -fx-background-color: #7aa2f7;
+    -fx-text-fill: #1e1e2e;
+    -fx-font-weight: bold;
+}
+
+.button:default:hover {
+    -fx-background-color: #89b4fa;
+}
+
+.button:cancel {
+    -fx-background-color: #414868;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                             TEXT FIELDS & INPUTS                             */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.text-field,
+.text-area,
+.password-field {
+    -fx-background-color: #24283b;
+    -fx-text-fill: #c0caf5;
+    -fx-prompt-text-fill: #565f89;
+    -fx-border-color: #414868;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-highlight-fill: #7aa2f7;
+    -fx-highlight-text-fill: #1e1e2e;
+}
+
+.text-field:focused,
+.text-area:focused,
+.password-field:focused {
+    -fx-border-color: #7aa2f7;
+    -fx-border-width: 2px;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                              LABELS & TEXT                                   */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.label {
+    -fx-text-fill: #c0caf5;
+}
+
+.hyperlink {
+    -fx-text-fill: #7aa2f7;
+    -fx-border-color: transparent;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #89b4fa;
+    -fx-underline: true;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                     CHECKBOXES & RADIO BUTTONS                               */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.check-box {
+    -fx-text-fill: #c0caf5;
+}
+
+.check-box>.box {
+    -fx-background-color: #24283b;
+    -fx-border-color: #565f89;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.check-box:selected>.box {
+    -fx-background-color: #7aa2f7;
+    -fx-border-color: #7aa2f7;
+}
+
+.check-box:selected>.box>.mark {
+    -fx-background-color: #1e1e2e;
+}
+
+.check-box:hover>.box {
+    -fx-border-color: #7aa2f7;
+}
+
+.radio-button {
+    -fx-text-fill: #c0caf5;
+}
+
+.radio-button>.radio {
+    -fx-background-color: #24283b;
+    -fx-border-color: #565f89;
+}
+
+.radio-button:selected>.radio {
+    -fx-background-color: #24283b;
+    -fx-border-color: #7aa2f7;
+}
+
+.radio-button:selected>.radio>.dot {
+    -fx-background-color: #7aa2f7;
+}
+
+.radio-button:hover>.radio {
+    -fx-border-color: #7aa2f7;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                              COMBO BOXES                                      */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.combo-box {
+    -fx-background-color: #24283b;
+    -fx-border-color: #414868;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.combo-box>.list-cell {
+    -fx-text-fill: #c0caf5;
+    -fx-background-color: transparent;
+}
+
+.combo-box>.arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box>.arrow-button>.arrow {
+    -fx-background-color: #c0caf5;
+}
+
+.combo-box-popup>.list-view {
+    -fx-background-color: #24283b;
+    -fx-border-color: #414868;
+}
+
+.combo-box-popup>.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell {
+    -fx-text-fill: #c0caf5;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup>.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell:filled:hover {
+    -fx-background-color: #414868;
+}
+
+.combo-box-popup>.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell:filled:selected {
+    -fx-background-color: #7aa2f7;
+    -fx-text-fill: #1e1e2e;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                               TAB PANES                                       */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.tab-pane {
+    -fx-background-color: #1e1e2e;
+}
+
+.tab-pane>.tab-header-area {
+    -fx-background-color: #1e1e2e;
+    -fx-padding: 0;
+}
+
+.tab-pane>.tab-header-area>.tab-header-background {
+    -fx-background-color: #1e1e2e;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab {
+    -fx-background-color: #24283b;
+    -fx-border-color: #414868;
+    -fx-border-width: 1 1 0 1;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-radius: 5 5 0 0;
+    -fx-padding: 0.5em 1em;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab:selected {
+    -fx-background-color: #414868;
+    -fx-border-color: #7aa2f7 #7aa2f7 transparent #7aa2f7;
+}
+
+.tab-pane>.tab-header-area>.headers-region>.tab>.tab-container>.tab-label {
+    -fx-text-fill: #c0caf5;
+}
+
+.tab-pane>.tab-content-area {
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: #414868;
+    -fx-border-width: 1px;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                           TITLED PANES (Collapsible Sections)                */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.titled-pane {
+    -fx-text-fill: #c0caf5;
+}
+
+.titled-pane>.title {
+    -fx-background-color: #414868;
+    -fx-background-radius: 5px;
+    -fx-padding: 0.4em 0.8em;
+}
+
+.titled-pane>.title>.text {
+    -fx-fill: #c0caf5;
+    -fx-font-weight: bold;
+}
+
+.titled-pane>.title>.arrow-button>.arrow {
+    -fx-background-color: #c0caf5;
+}
+
+.titled-pane>*.content {
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: transparent;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                              SCROLL PANES                                     */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.scroll-pane {
+    -fx-background-color: #1e1e2e;
+}
+
+.scroll-pane>.viewport {
+    -fx-background-color: #1e1e2e;
+}
+
+.scroll-bar {
+    -fx-background-color: #24283b;
+}
+
+.scroll-bar>.thumb {
+    -fx-background-color: #414868;
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar>.thumb:hover {
+    -fx-background-color: #565f89;
+}
+
+.scroll-bar>.increment-button,
+.scroll-bar>.decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar>.increment-button>.increment-arrow,
+.scroll-bar>.decrement-button>.decrement-arrow {
+    -fx-background-color: #565f89;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                             SLIDERS                                           */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.slider>.track {
+    -fx-background-color: #414868;
+    -fx-background-radius: 4px;
+}
+
+.slider>.thumb {
+    -fx-background-color: #7aa2f7;
+}
+
+.slider>.thumb:hover {
+    -fx-background-color: #89b4fa;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                            LIST VIEWS & TABLES                                */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.list-view {
+    -fx-background-color: #24283b;
+    -fx-border-color: #414868;
+}
+
+.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #c0caf5;
+}
+
+.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell:filled:hover {
+    -fx-background-color: #414868;
+}
+
+.list-view>.virtual-flow>.clipped-container>.sheet>.list-cell:filled:selected {
+    -fx-background-color: #7aa2f7;
+    -fx-text-fill: #1e1e2e;
+}
+
+.table-view {
+    -fx-background-color: #24283b;
+    -fx-border-color: #414868;
+}
+
+.table-view .column-header {
+    -fx-background-color: #414868;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #c0caf5;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: derive(#24283b, -5%);
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #7aa2f7;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #c0caf5;
+    -fx-border-color: transparent;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: #1e1e2e;
+}
+
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+/*                           TOOLTIPS                                            */
+/* ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ */
+
+.tooltip {
+    -fx-background-color: #24283b;
+    -fx-text-fill: #c0caf5;
+    -fx-border-color: #565f89;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 0.5em;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/*                          BLUEJ-SPECIFIC DIALOG STYLES                        */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Error States */
 .dialog-error-label {
     -fx-text-fill: #f7768e;
 }
+
 .text-field:bj-dialog-error {
     -fx-border-color: #f7768e;
     -fx-border-width: 2;
@@ -9,57 +458,78 @@ Shared */
     -fx-border-radius: 3;
     -fx-border-style: solid;
 }
+
 .combo-box:bj-growable-remove-highlight {
-    -fx-border-color: #414868;
+    -fx-border-color: #7aa2f7;
     -fx-border-width: 2;
     -fx-border-insets: -2;
     -fx-border-radius: 2;
     -fx-border-style: solid;
 }
+
+/* Radio/Check Border (Segmented Controls) */
 .radio-check-border {
     -fx-padding: 0.5em 1em 0.5em 0.5em !important;
+    -fx-background-color: #24283b;
+    -fx-border-color: #414868;
 }
-.radio-check-border > .radio {
+
+.radio-check-border:selected {
+    -fx-background-color: #7aa2f7;
+}
+
+.radio-check-border>.radio {
     -fx-background-color: null;
 }
-.radio-check-border > .radio > .dot {
-    /* See http://jxnblk.com/paths/?d=M24%2056%20L64%2016%20L56%208%20L24%2042%20L12%2031%20L5%2038.5%20Z */
+
+.radio-check-border>.radio>.dot {
     -fx-shape: "M24 56 L64 16 L56 8 L24 42 L12 31 L5 38.5 Z";
     -fx-opacity: 0.0;
-    -fx-background-color: #0c010d /*#c0caf5;*/
+    -fx-background-color: #1e1e2e;
 }
-.radio-check-border:selected > .radio > .dot {
-    -fx-background-color:  #0c010d /*#c0caf5;*/
+
+.radio-check-border:selected>.radio>.dot {
+    -fx-background-color: #ffffff;
+    /* White tick visible on blue */
     -fx-opacity: 1.0;
 }
+
 .radio-check-border.left-pill {
     -fx-background-radius: 9 0 0 9, 9 0 0 9, 8 0 0 8, 7 0 0 7;
 }
+
 .radio-check-border.left-pill:focused {
     -fx-background-radius: 9 0 0 9, 8 0 0 8, 7 0 0 7, 10 0 0 10, 6 0 0 6;
 }
+
 .radio-check-border.right-pill {
     -fx-background-radius: 0 9 9 0, 0 9 9 0, 0 8 8 0, 0 7 7 0;
 }
+
 .radio-check-border.right-pill:focused {
     -fx-background-radius: 0 9 9 0, 0 8 8 0, 0 7 7 0, 0 10 10 0, 0 6 6 0;
 }
+
 .radio-check-border.center-pill {
     -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
 }
+
 .radio-check-border.center-pill:focused {
     -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
 }
+
+/* Growable Add/Remove Icons */
 .growable-remove .growable-remove-graphic {
-     /* http://jxnblk.com/paths/?d=M60%2052%20L40%2032%20L60%2012%20L52%204%20L32%2024%20L12%204%20L4%2012%20L24%2032%20L4%2052%20L12%2060%20L32%2040%20L52%2060%20Z */
     -fx-shape: "M60 52 L40 32 L60 12 L52 4 L32 24 L12 4 L4 12 L24 32 L4 52 L12 60 L32 40 L52 60 Z";
 }
+
 .growable-add .growable-add-graphic {
-    /* http://jxnblk.com/paths/?d=M38%2060%20L38%2038%20L60%2038%20L60%2026%20L38%2026%20L38%204%20L26%204%20L26%2026%20L4%2026%20L4%2038%20L26%2038%20L26%2060%20Z */
     -fx-shape: "M38 60 L38 38 L60 38 L60 26 L38 26 L38 4 L26 4 L26 26 L4 26 L4 38 L26 38 L26 60 Z";
 }
-.growable-remove .growable-remove-graphic, .growable-add .growable-add-graphic {
-    -fx-background-color: #565f89;
+
+.growable-remove .growable-remove-graphic,
+.growable-add .growable-add-graphic {
+    -fx-background-color: #c0caf5;
     -fx-min-width: 10;
     -fx-min-height: 10;
     -fx-pref-width: 10;
@@ -67,13 +537,15 @@ Shared */
     -fx-max-width: 10;
     -fx-max-height: 10;
 }
-.growable-remove, .growable-add {
+
+.growable-remove,
+.growable-add {
+    -fx-background-color: #414868;
     -fx-border-radius: 10;
     -fx-border-style: solid;
     -fx-border-width: 0px;
     -fx-border-color: #565f89;
     -fx-background-radius: 10 10 9 8;
-    
     -fx-alignment: center;
     -fx-content-display: center;
     -fx-min-width: 20;
@@ -84,71 +556,653 @@ Shared */
     -fx-max-height: 20;
 }
 
-/* InputDialog helper class */
+.growable-remove:hover,
+.growable-add:hover {
+    -fx-background-color: #565f89;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/*                          SPECIFIC DIALOG CONTENT PANES                       */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Input Dialog */
 .input-dialog-content {
     -fx-spacing: 1em;
 }
 
-/* About BlueJ/Greenfoot dialog, modified to be dark but readable */
+/* About Dialog */
 .about-dialog-content {
     -fx-padding: 1em;
-    -fx-background-color: #1a1b26;
+    -fx-background-color: #1e1e2e;
 }
-.about-dialog-content .label, .about-dialog-content .hyperlink .label {
-    -fx-text-fill:  #0c010d /*#c0caf5;*/;
+
+.about-dialog-content .label,
+.about-dialog-content .hyperlink .label {
+    -fx-text-fill: #c0caf5;
 }
+
 .about-team {
     -fx-padding: 0 0 1em 0;
 }
-.about-tabs > .tab-header-area > .tab-header-background {
-    -fx-background-color: #1a1b26;
+
+.about-tabs>.tab-header-area>.tab-header-background {
+    -fx-background-color: #1e1e2e;
 }
+
 .about-more-info {
     -fx-padding: 1em 0 0 0;
 }
+
 .about-debuglog {
     -fx-padding: 1em 0 0 0;
     -fx-spacing: 2em;
 }
+
 .about-version {
     -fx-font-weight: bold;
     -fx-padding: 0 0 1em 0;
 }
+
 .about-info-link {
     -fx-padding: 1em 0 0 0;
 }
+
 .about-translators-table {
     -fx-padding: 1em 0.5em 0 0.5em;
-    -fx-background-color: #1a1b26;
+    -fx-background-color: #1e1e2e;
 }
+
 .about-translators-table .column-header-background {
-    -fx-background-color: #1a1b26;
+    -fx-background-color: #1e1e2e;
 }
+
 .about-translators-table .table-row-cell {
-    -fx-background-color: #1a1b26;
+    -fx-background-color: #1e1e2e;
 }
+
 .about-translators-table .table-row-cell:empty {
     -fx-background-color: transparent;
 }
+
 .about-translators-table .table-row-cell .table-cell {
     -fx-border-width: 0px;
-    -fx-text-fill:  #0c010d /*#c0caf5;*/;
+    -fx-text-fill: #c0caf5;
 }
+
 .about-contributors-title {
     -fx-font-weight: bold;
 }
-/* ... remaining dialogs ... */
-.prefmgr-titled .title, .prefmgr-titled .title:hover {
-    -fx-background-color: #24283b;
-    -fx-background-radius: 5px;
+
+/* Version Check Dialog */
+.version-check-dialog-content {
+    -fx-padding: 1em;
+    -fx-spacing: 1em;
 }
-.prefmgr-titled .title .text {
-    -fx-fill:  #0c010d /*#c0caf5;*/;
+
+/* Export Dialog */
+.export-dialog-content {
+    -fx-padding: 1em;
+    -fx-spacing: 1em;
 }
+
+.export-dialog-main-row {
+    -fx-spacing: 2em;
+}
+
+.export-dialog-userlibs {
+    -fx-padding: 0.5em;
+    -fx-hgap: 1em;
+    -fx-vgap: 1em;
+}
+
+/* Library Call Dialog */
+.library-call-dialog-content {
+    -fx-padding: 1em;
+    -fx-spacing: 1em;
+}
+
+.library-call-class {
+    -fx-spacing: 1em;
+    -fx-alignment: baseline-left;
+}
+
+.library-call-methods {
+    -fx-pref-height: 300;
+}
+
+/* New Class Dialog */
+.new-class-dialog {
+    -fx-spacing: 1em;
+    -fx-padding: 1em;
+    -fx-background-color: #1e1e2e;
+}
+
+.new-class-dialog .new-class-dialog-hbox {
+    -fx-spacing: 2em;
+}
+
+.new-class-dialog .radio-button {
+    -fx-padding: 0 0 0 3em;
+}
+
+/* New Project Dialog */
+.new-project-dialog {
+    -fx-spacing: 1em;
+    -fx-padding: 1em;
+    -fx-background-color: #1e1e2e;
+}
+
+.new-project-dialog .proj-grid {
+    -fx-hgap: 0.5em;
+    -fx-vgap: 0.5em;
+}
+
+.new-project-dialog .compound-path {
+    -fx-label-padding: 0 0 0 0.65em;
+}
+
+/* Constructor/Method Call Dialog */
+.call-dialog-content,
+.constructor-dialog-fields {
+    -fx-spacing: 1em;
+}
+
+.call-dialog-content .combo-box {
+    -fx-min-width: 14em;
+    -fx-max-width: Infinity;
+}
+
+.call-dialog-content .combo-box .text-input {
+    -fx-prompt-text-fill: #565f89;
+}
+
+.call-dialog-content .grid {
+    -fx-hgap: 0.5em;
+    -fx-vgap: 0.5em;
+}
+
+.call-dialog-content .hanging-flow-pane {
+    -bj-row-spacing: 0.5em;
+}
+
+.call-dialog-content .call-label {
+    -fx-font-weight: bold;
+}
+
+.call-dialog-content .assert-panel .assert-row {
+    -fx-spacing: 0.5em;
+    -fx-padding: 0 0 0 0.5em;
+}
+
+.call-dialog-content .assert-panel .delta-row {
+    -fx-spacing: 0.5em;
+    -fx-padding: 0.5em 0 0 0.5em;
+}
+
+.call-dialog-content .assert-panel .assert-checkbox {
+    -fx-padding: 0.2em 0 0 0;
+}
+
+.call-dialog-content .assert-panel .delta-label {
+    -fx-padding: 0.25em 0 0 0;
+}
+
+.call-dialog-content .assert-panel .assert-field-data {
+    -fx-pref-width: 10em;
+    -fx-alignment: baseline-left;
+}
+
+.call-dialog-content .assert-panel .assert-field-delta {
+    -fx-pref-width: 5em;
+}
+
+.constructor-instance-name-row {
+    -fx-spacing: 1em;
+}
+
+/* Formatted Print Flow */
+.formatted-print-flow .formatted-print-line {
+    -fx-font-size: 110%;
+}
+
+.formatted-print-flow .formatted-print-line:bj-bold {
+    -fx-font-weight: bold;
+}
+
+.formatted-print-flow .formatted-print-line:bj-italic {
+    -fx-font-style: italic;
+}
+
 .formatted-print-flow .formatted-print-line:bj-color-default {
-    -fx-fill:  #0c010d /*#c0caf5;*/;
+    -fx-fill: #c0caf5;
 }
+
 .formatted-print-flow .formatted-print-line:bj-color-gray {
     -fx-fill: #565f89;
 }
-/* All other dialog properties retained but not shown for brevity
+
+.formatted-print-flow .formatted-print-line:bj-size-default {
+    -fx-font-size: 110%;
+}
+
+.formatted-print-flow .formatted-print-line:bj-size-small {
+    -fx-font-size: 100%;
+}
+
+.formatted-print-flow .formatted-print-line:bj-size-large {
+    -fx-font-size: 120%;
+}
+
+/* Extensions Dialog */
+.extension-list {
+    -fx-spacing: 1em;
+}
+
+.extension-info {
+    -fx-fill-width: true;
+    -fx-spacing: 1em;
+}
+
+.extension-info .label,
+.extension-info .hyperlink {
+    -fx-wrap-text: true;
+}
+
+/* Import Problem Dialogs */
+.import-mismatch-content,
+.import-failed-content {
+    -fx-spacing: 1em;
+    -fx-fill-width: true;
+}
+
+.import-mismatch-content {
+    -fx-pref-width: 600px;
+}
+
+.import-failed-content {
+    -fx-pref-width: 450px;
+}
+
+.import-mismatch-content .scroll-pane,
+.import-failed-content .scroll-pane {
+    -fx-max-height: 10em;
+    -fx-fit-to-width: true;
+}
+
+.import-mismatch-content .label,
+.import-failed-content .label {
+    -fx-wrap-text: true;
+}
+
+/* Blackbox Opt-in */
+.blackbox-optin-content {
+    -fx-pref-width: 620px;
+    -fx-fill-width: true;
+    -fx-spacing: 1em;
+    -fx-padding: 1em;
+}
+
+.blackbox-optin-content .blackbox-optin-header {
+    -fx-spacing: 2em;
+}
+
+.blackbox-optin-content .blackbox-optin-header .blackbox-optin-header-text {
+    -fx-font-weight: bold;
+}
+
+.blackbox-optin-content .blackbox-optin-explanation {
+    -fx-font-size: 90%;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/*                          PREFERENCE MANAGER DIALOGS                          */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+.prefmgr-titled {
+    -fx-collapsible: false;
+    -fx-text-overrun: center-ellipsis;
+    -fx-min-width: 400px;
+}
+
+.prefmgr-titled>*.content {
+    -fx-border-width: 0;
+    -fx-background-color: #1e1e2e;
+}
+
+.prefmgr-titled .title,
+.prefmgr-titled .title:hover {
+    -fx-background-color: #7aa2f7;
+    -fx-background-radius: 5px;
+}
+
+.prefmgr-titled .title .text {
+    -fx-fill: #1e1e2e;
+    -fx-font-weight: bold;
+}
+
+/* Don't colour when nested */
+.prefmgr-titled .prefmgr-titled .title,
+.prefmgr-titled .prefmgr-titled .title:hover {
+    -fx-background-color: transparent;
+}
+
+.prefmgr-titled .prefmgr-titled .title .text {
+    -fx-fill: #c0caf5;
+}
+
+.prefmgr-titled-content {
+    -fx-padding: 1em 2em 1em 3em;
+    -fx-spacing: 0.5em;
+    -fx-fill-width: true;
+}
+
+.prefmgr-label-hbox {
+    -fx-spacing: 1em;
+}
+
+.prefmgr-label-hbox,
+.prefmgr-label-hbox .label,
+.prefmgr-label-hbox .text-field,
+.prefmgr-label-hbox .button {
+    -fx-alignment: baseline-left;
+}
+
+.prefmgr-text-wrapped {
+    -fx-fill: #c0caf5;
+}
+
+.prefmgr-tab-pane {
+    -fx-pref-width: 800px;
+}
+
+.prefmgr-tab-pane>.tab-header-area>.tab-header-background {
+    -fx-background-color: #1e1e2e;
+}
+
+.prefmgr-tab-pane>.tab-content-area {
+    -fx-border-width: 1px;
+    -fx-border-color: #414868;
+    -fx-background-color: #1e1e2e;
+}
+
+.prefmgr-pref-panel {
+    -fx-spacing: 1em;
+    -fx-padding: 2em 4em 2em 4em;
+    -fx-fill-width: true;
+    -fx-background-color: #1e1e2e;
+}
+
+.prefmgr-ext-innerpanel {
+    -fx-spacing: 1em;
+}
+
+.prefmgr-experiment-participant {
+    -fx-hgap: 1em;
+    -fx-vgap: 0.5em;
+    -fx-padding: 0.5em 0 0 2em;
+}
+
+.prefmgr-experiment-participant .text-field {
+    -fx-pref-column-count: 25;
+}
+
+.prefmgr-jdk-url {
+    -fx-pref-column-count: 35;
+}
+
+.prefmgr-interface-checkboxes {
+    -fx-spacing: 4em;
+    -fx-alignment: baseline-center;
+}
+
+.prefmgr-interface-panel {
+    -fx-fill-width: false;
+}
+
+.prefmgr-scope-colour-container {
+    -fx-border-width: 1px;
+    -fx-border-color: #414868;
+    -fx-background-color: #24283b;
+}
+
+.prefmgr-scope-colour-rectangles {
+    -fx-padding: 0.5em;
+}
+
+.prefmgr-java-editor-top {
+    -fx-hgap: 4em;
+    -fx-vgap: 1em;
+    -fx-padding: 0 0 2em 0;
+}
+
+.prefmgr-java-scope-hbox {
+    -fx-spacing: 5em;
+    -fx-alignment: center;
+}
+
+.prefmgr-text-editor-top {
+    -fx-hgap: 1em;
+    -fx-vgap: 1em;
+    -fx-padding: 0 0 2em 0;
+}
+
+.prefmgr-library-listview {
+    -fx-min-height: 8em;
+    -fx-pref-height: 8em;
+}
+
+.prefmgr-library-userlib-buttons {
+    -fx-padding: 1em 1em 0 2em;
+    -fx-spacing: 1em;
+    -fx-fill-width: true;
+    -fx-alignment: top-center;
+}
+
+.prefmgr-library-userlib-buttons .button {
+    -fx-max-width: 9999.0;
+}
+
+.prefmgr-library-panel .prefmgr-titled-content {
+    -fx-padding: 1em 0 1em 0;
+}
+
+.prefmgr-key-panel .key-bindings-column {
+    -fx-padding: 4em 2em 2em 2em;
+}
+
+.prefmgr-key-panel .key-bindings-buttons {
+    -fx-spacing: 4em;
+    -fx-padding: 1em;
+}
+
+.prefmgr-key-panel .key-header-label {
+    -fx-label-padding: 0 0 1em 0;
+}
+
+/* Non-Project Warnings */
+.not-a-project {
+    -fx-spacing: 0.5em;
+    -fx-min-width: 500.0;
+}
+
+.non-empty-directory {
+    -fx-spacing: 0.5em;
+}
+
+.non-empty-directory .parent-path {
+    -fx-padding: 0 0 0 4em;
+    -fx-max-width: 400.0;
+    -fx-text-overrun: center-ellipsis;
+    -fx-wrap-text: false;
+}
+
+.non-empty-directory .subDirRow,
+.non-empty-directory .subDirRow>* {
+    -fx-alignment: baseline-left;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════ */
+/*                               TEAM DIALOGS                                    */
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
+.team-settings {
+    -fx-min-width: 30em;
+    -fx-pref-width: 43em;
+    -fx-min-height: 35em;
+    -fx-pref-height: 35em;
+    -fx-padding-left: 2em;
+    -fx-margin-left: 2em;
+    -bj-border-radius: 5;
+    -bj-background-radius: 10;
+    -bj-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 10;
+    -fx-border-width: 2;
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: #414868;
+}
+
+.team-settings .panel {
+    -fx-padding: 1em 1em 1.5em 2em;
+    -fx-spacing: 0.8em;
+}
+
+.team-settings .grid {
+    -fx-min-width: 40em;
+    -fx-pref-width: 40em;
+    -fx-hgap: 0.5em;
+    -fx-vgap: 0.5em;
+    -fx-padding: 1em 1em 1.5em 2em;
+}
+
+.team-settings .pwd-hbox {
+    -fx-spacing: 0.2em;
+}
+
+.team-settings-tooltip {
+    -fx-text-fill: #c0caf5;
+    -fx-background-color: #24283b;
+    -fx-background-radius: 10;
+    -fx-padding: 10 10 10 10;
+}
+
+.team-test-connection {
+    -fx-min-width: 50em;
+    -fx-pref-width: 25em;
+    -fx-min-height: 16em;
+    -fx-pref-height: 18em;
+}
+
+.team-test-connection .pane {
+    -fx-padding: 0.833em;
+    -fx-spacing: 0.833em;
+}
+
+.team-load-SVNnotsupported {
+    -fx-min-width: 51em;
+    -fx-pref-width: 51em;
+    -fx-min-height: 18em;
+    -fx-pref-height: 18em;
+}
+
+.team-load-SVNnotsupported .pane {
+    -fx-padding: 0.833em;
+    -fx-spacing: 0.833em;
+}
+
+.team-commit-push {
+    -fx-min-height: 35em;
+    -fx-pref-height: 50em;
+}
+
+.team-commit-comments {
+    -fx-min-height: 30em;
+    -fx-pref-height: 40em;
+}
+
+.team-commit-push,
+.team-commit-comments {
+    -fx-min-width: 20em;
+    -fx-pref-width: 34em;
+    -fx-padding: 1em;
+    -bj-border-radius: 5;
+    -bj-background-radius: 10;
+    -bj-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 10;
+    -fx-border-width: 2;
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: #414868;
+}
+
+.team-commit-push .main-pane,
+.team-commit-comments .main-pane {
+    -fx-spacing: 0.5em;
+}
+
+.team-commit-push .main-pane .button-hbox,
+.team-commit-comments .main-pane .button-hbox {
+    -fx-spacing: 0.8em;
+}
+
+.team-update-files {
+    -fx-min-width: 32em;
+    -fx-pref-width: 32em;
+    -fx-min-height: 16em;
+    -fx-pref-height: 18em;
+}
+
+.team-update-files .main-pane {
+    -fx-spacing: 0.8em;
+}
+
+.team-update-files>.button-hbox {
+    -fx-spacing: 0.5em;
+    -fx-padding: 0.833em;
+    -fx-alignment: center-right;
+}
+
+.team-status {
+    -fx-min-width: 10em;
+    -fx-pref-width: 40em;
+    -fx-min-height: 16em;
+    -fx-pref-height: 24em;
+}
+
+.replacement-button-bar {
+    -fx-padding: 0.833em;
+}
+
+.status-table {
+    -fx-border-color: #414868;
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+}
+
+.team-history {
+    -fx-min-width: 45em;
+    -fx-pref-width: 45em;
+    -fx-min-height: 30em;
+    -fx-pref-height: 40em;
+}
+
+.team-history .main-pane {
+    -fx-spacing: 1em;
+}
+
+.team-conflicts,
+.team-module-select {
+    -fx-min-width: 10em;
+    -fx-pref-width: 25em;
+    -fx-min-height: 16em;
+    -fx-pref-height: 18em;
+}
+
+/* New Text File Dialog */
+.new-textfile-dialog {
+    -fx-pref-width: 25em;
+}
+
+.new-textfile-dialog .input-dialog-field-wrapper {
+    -fx-alignment: center-right;
+}

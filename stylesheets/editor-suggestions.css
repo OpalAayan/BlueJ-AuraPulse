@@ -1,7 +1,21 @@
-/* Styles for suggestions (i.e. code completion) */
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR SUGGESTIONS - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for code completion suggestions dropdown.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Theme Variables
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .root {
-  suggestion-background: #24283b;
+    suggestion-background: #24283b;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Suggestion List Container
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .suggestion-list {
     -fx-background-color: suggestion-background;
@@ -9,16 +23,27 @@
     -fx-border-color: #414868;
     -fx-border-width: 1;
     -fx-border-style: solid outside;
-
     -bj-pref-width: 25em;
     -bj-type-width: 5em;
 }
+
+.suggestion-list-scroll-pane:focused {
+    -fx-background-color: -fx-box-border, -fx-box-border, -fx-background !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Suggestion Items
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .suggestion {
     -fx-padding: 2px 4px;
     -fx-cursor: hand;
     -fx-background-color: transparent;
     -fx-background-radius: 4px;
+}
+
+.suggestion:bj-suggestion-highlight {
+    -fx-background-color: #414868;
 }
 
 .suggestion-cell {
@@ -30,10 +55,19 @@
     -fx-text-fill: #c0caf5;
 }
 
-.suggestion-prefix, .suggestion-matching, .suggestion-next, .suggestion-suffix {
+/* ─────────────────────────────────────────────────────────────────────────────
+   Suggestion Text Matching
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.suggestion-prefix,
+.suggestion-matching,
+.suggestion-next,
+.suggestion-suffix {
     -fx-label-padding: 0 -2 0 0;
 }
-.suggestion-matching, .suggestion-type:bj-match {
+
+.suggestion-matching,
+.suggestion-type:bj-match {
     -fx-underline: true;
     -fx-text-fill: #9ece6a;
 }
@@ -41,6 +75,11 @@
 .suggestion-next {
     -fx-font-weight: bold;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Button Hints & Headers
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .suggestion-button-hint {
     -fx-font-size: 75%;
     -fx-border-color: #565f89;
@@ -48,10 +87,6 @@
     -fx-label-padding: 2px 4px;
     -fx-background-color: #1a1b26;
     -fx-background-radius: 4px;
-}
-
-.suggestion:bj-suggestion-highlight {
-    -fx-background-color: #414868;
 }
 
 .suggestion-similar-heading {
@@ -71,7 +106,12 @@
     -fx-text-fill: #565f89;
 }
 
-.suggestion-javadoc, .suggestion-file-preview {
+/* ─────────────────────────────────────────────────────────────────────────────
+   Javadoc & File Preview
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.suggestion-javadoc,
+.suggestion-file-preview {
     -fx-background-color: #16161e;
     -fx-background-radius: 0 5 5 0;
     -fx-border-color: #414868;
@@ -79,16 +119,18 @@
     -fx-border-radius: 0 5 5 0;
     -fx-border-style: solid outside;
 }
+
 .suggestion-file-preview {
     -fx-padding: 20px;
 }
+
 .suggestion-javadoc .web-view {
     -fx-font-smoothing-type: gray;
 }
 
-.suggestion-list-scroll-pane:focused {
-    -fx-background-color: -fx-box-border, -fx-box-border, -fx-background !important;
-}
+/* ─────────────────────────────────────────────────────────────────────────────
+   More Label
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .suggestion-more-label {
     -fx-text-fill: #a9b1d6;

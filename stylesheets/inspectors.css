@@ -1,46 +1,97 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * INSPECTORS - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for object and class inspector windows.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Inspector Container
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .inspector {
     -fx-padding: 1em 2em 2em 2em;
     -fx-background-color: #1a1b26;
+    -fx-spacing: 1em;
 }
+
 .inspector .label {
     -fx-text-fill: #c0caf5;
 }
+
+.inspector .button:disabled {
+    -fx-opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Inspector Header
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.inspector-header {
+    -fx-alignment: center;
+    -fx-padding: 0 0 1em 0;
+    -fx-font-size: 120%;
+}
+
+.inspector-object-header .label,
+.inspector-class-header .label {
+    -fx-text-fill: #c0caf5;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Side Buttons
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .inspector-side-buttons {
     -fx-padding: 1em 1em 1em 2em;
     -fx-spacing: 1.5em;
     -fx-fill-width: true;
 }
+
 .inspector-side-buttons .button {
     -fx-max-width: 9999.0;
 }
-.field-list > .viewport {
-    -fx-background-color: transparent;
-} 
 
-.field-list .inspector-field-description, .field-list .inspector-field-value {
+/* ─────────────────────────────────────────────────────────────────────────────
+   Field List
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.field-list>.viewport {
+    -fx-background-color: transparent;
+}
+
+.field-list .inspector-field-description,
+.field-list .inspector-field-value {
     -fx-border-color: transparent;
 }
+
 .field-list .inspector-field-description {
     -fx-alignment: baseline-left;
     -fx-background-color: transparent;
     -fx-text-fill: #c0caf5 !important;
 }
+
 .field-list .inspector-field-value-label {
     -fx-alignment: baseline-center;
     -fx-background-color: transparent, #24283b;
     -fx-background-insets: 0, 3;
     -fx-text-fill: #c0caf5 !important;
 }
+
 .field-list .inspector-field-value-wrapper {
-    -fx-padding:  0 5 0 5;
+    -fx-padding: 0 5 0 5;
     -fx-alignment: baseline-center;
     -fx-background-color: transparent, #414868, #24283b;
     -fx-background-insets: 0, 2, 3;
 }
 
-.inspector {
-    -fx-spacing: 1em;
+.inspector .field-list-content {
+    -fx-padding: 1em;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Inspector Types
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .inspector-class {
     -fx-background-color: #16161e;
@@ -48,51 +99,46 @@
     -fx-border-color: #414868;
     -fx-border-style: solid;
 }
-.inspector-header {
-    -fx-alignment: center;
-    -fx-padding: 0 0 1em 0;
-    -fx-font-size: 120%;
-}
-.inspector-object-header .label {
-    -fx-text-fill: #c0caf5;
-}
-.inspector-class-header .label {
-    -fx-text-fill: #c0caf5;
-    
-}
+
 .inspector-object .field-list {
     -fx-background-color: #24283b;
 }
+
 .inspector-class .field-list {
     -fx-background-color: #16161e;
 }
+
 .inspector-result .field-list {
     -fx-background-color: transparent;
 }
+
 .inspector-result .inspector-result-details {
     -fx-background-color: #16161e;
 }
-.inspector .field-list-content {
-    -fx-padding: 1em;
-}
+
 .inspector-result-details-header {
     -fx-padding: 1em 0.5em 0.5em 0.5em;
     -fx-font-weight: bold;
 }
 
-.inspector .button:disabled {
-    -fx-opacity: 0.5;
+/* ─────────────────────────────────────────────────────────────────────────────
+   Selection States
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.inspector-object .field-list-content .inspector-field-value-wrapper:bj-selected,
+.inspector-result .field-list-content .inspector-field-value-wrapper:bj-selected {
+    -fx-background-color: #7aa2f7, #414868, #24283b;
 }
 
-.inspector-object .field-list-content .inspector-field-value-wrapper:bj-selected, .inspector-result .field-list-content  .inspector-field-value-wrapper:bj-selected {
-    -fx-background-color: #7aa2f7, #414868, #24283b; 
-}
-.inspector-object .field-list-content .inspector-field-description:bj-selected, .inspector-result .field-list-content  .inspector-field-description:bj-selected {
+.inspector-object .field-list-content .inspector-field-description:bj-selected,
+.inspector-result .field-list-content .inspector-field-description:bj-selected {
     -fx-background-color: #7aa2f7;
 }
+
 .inspector-class .field-list-content .inspector-field-value-wrapper:bj-selected {
-    -fx-background-color: #7aa2f7, #414868, #24283b; 
+    -fx-background-color: #7aa2f7, #414868, #24283b;
 }
+
 .inspector-class .field-list-content .inspector-field-description:bj-selected {
-    -fx-background-color: #7aa2f7; 
+    -fx-background-color: #7aa2f7;
 }

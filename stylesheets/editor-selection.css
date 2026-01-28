@@ -1,13 +1,23 @@
-.selection-highlight, .birdseye-selection {
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR SELECTION - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for selection highlights in the frame-based editor.
+ */
+
+.selection-highlight,
+.birdseye-selection {
     -fx-arc-height: 7;
     -fx-arc-width: 7;
     -fx-stroke: #414868;
     -fx-stroke-width: 2;
     -fx-fill: transparent;
 }
+
 .selection-highlight-normal {
     -fx-fill: #414868;
 }
+
 .selection-highlight-delete {
     -fx-fill: rgba(247, 118, 142, 0.5);
 }

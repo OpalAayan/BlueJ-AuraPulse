@@ -1,27 +1,37 @@
 /*
- * Stop Icon Styling (Error/Terminate)
- * Uses bright, visible colors for icon shapes and labels.
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * SHARED - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Shared styles used across multiple components (stop icons, etc.).
  */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Stop Icon (Standard)
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .stop-icon .octagon {
-    -fx-fill: #f7768e; /* A vibrant but soft red for the icon shape */
-    -fx-stroke: #1e1e2e; /* Add a dark stroke to separate it from the label */
+    -fx-fill: #f7768e;
+    -fx-stroke: #1e1e2e;
     -fx-stroke-width: 0.5;
 }
 
 .stop-icon .label {
-    -fx-text-fill: #1e1e2e; /* Dark text provides better contrast on the red icon */
+    -fx-text-fill: #1e1e2e;
     -fx-font-size: 6px;
     -fx-font-weight: bold;
 }
 
-/* Larger variant of the stop icon */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Stop Icon (Large Variant)
+   ───────────────────────────────────────────────────────────────────────────── */
+
 .stop-icon:bj-large .octagon {
-    -fx-stroke: #d9e0ee; /* A light border for visibility on dark backgrounds */
+    -fx-stroke: #d9e0ee;
     -fx-stroke-type: inside;
     -fx-stroke-width: 1;
 }
 
 .stop-icon:bj-large .label {
     -fx-font-size: 10px;
-    -fx-text-fill: #d9e0ee; /* Light text for the larger version */
+    -fx-text-fill: #d9e0ee;
 }

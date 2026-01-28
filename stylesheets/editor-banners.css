@@ -1,3 +1,10 @@
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR BANNERS - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for notification banners (e.g., undo delete prompts).
+ */
+
 .banner-undo-delete {
     -fx-background-color: #e0af68;
     -fx-text-fill: #1a1b26;
@@ -10,7 +17,8 @@
     -fx-padding: 0 3em 0 0;
 }
 
-.banner-undo-delete .banner-undo-delete-button, .banner-undo-delete .banner-undo-delete-close {
+.banner-undo-delete .banner-undo-delete-button,
+.banner-undo-delete .banner-undo-delete-close {
     -fx-background-radius: 0.6em;
     -fx-border-radius: 0.6em;
     -fx-padding: 0em 0.5em 0em 0.5em;

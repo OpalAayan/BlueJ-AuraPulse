@@ -1,27 +1,53 @@
-.tabbed-editor > .tab-header-area > .tab-header-background {
+/*
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * EDITOR TABS - AuraPulse Dark Theme
+ * ═══════════════════════════════════════════════════════════════════════════════
+ * Styles for the tabbed editor header (file tabs).
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tab Header Area
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.tabbed-editor>.tab-header-area>.tab-header-background {
     -fx-background-color: #16161e;
 }
 
-.tabbed-editor > .tab-header-area .tab {
-    -fx-border-width: 0 0 2 0;
-    -fx-border-color: #16161e;
-    -fx-background-color:  #fdfbd5 /*(Non selected Class name tab will be less dark)   /*#414868;*/
-}
-.tabbed-editor > .tab-header-area .tab .tab-label {
-    -fx-text-fill: #c0caf5;
-}
-.tabbed-editor > .tab-header-area .bj-tab-error .tab-label {
-    -fx-border-width : 0 0 2 0;
-    -fx-border-color: #f7768e;
-}
-.tabbed-editor > .tab-header-area .moe-tab:selected {
-    /* Remove border at bottom of tab when selected: */
-    -fx-background-color: #f6e8b1!important; /* #1a1b26*/
-    -fx-border-color: transparent !important;
-}
-.tabbed-editor > .tab-header-area  {
+.tabbed-editor>.tab-header-area {
     -fx-padding: 2 5 -1 5;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Individual Tabs
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.tabbed-editor>.tab-header-area .tab {
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #16161e;
+    -fx-background-color: #fdfbd5;
+}
+
+.tabbed-editor>.tab-header-area .tab .tab-label {
+    -fx-text-fill: #c0caf5;
+}
+
+.tabbed-editor>.tab-header-area .moe-tab:selected {
+    -fx-background-color: #f6e8b1 !important;
+    -fx-border-color: transparent !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tab Error State
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.tabbed-editor>.tab-header-area .bj-tab-error .tab-label {
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #f7768e;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tab Close Button
+   ───────────────────────────────────────────────────────────────────────────── */
 
 .tabbed-editor .tab-close-button {
     -fx-background-color: #565f89;
