@@ -1,41 +1,42 @@
-# 🎨 BlueJ Tokyo Night Theme
+# 🎨 BlueJ AuraPulse
 
 A complete, modern dark theme for the BlueJ Java IDE.
 
-Tired of BlueJ’s outdated default look? This theme gives BlueJ a fresh, professional dark style inspired by popular palettes like **Tokyo Night** , **Catppuccin** and **Ocean Space**. It’s designed for readability, usability, and aesthetics — making coding more enjoyable and less straining on your eyes.
+Tired of BlueJ's outdated default look? This theme gives BlueJ a fresh, professional dark style inspired by popular palettes like **Tokyo Night**, **Catppuccin** and **Ocean Space**. It's designed for readability, usability, and aesthetics — making coding more enjoyable and less straining on your eyes.
 
 ---
 
 ## ✨ Gallery
 
-Here’s the theme in action:
-
-> All img are In 720p (1366*768) as that what my Old laptop has 
-
 ### Editor Window
-<img width="1366" height="768" alt="Screenshot From 2025-08-30 16-49-02" src="https://github.com/user-attachments/assets/f95cb037-677a-4858-be12-d9fbfcca0e3a" />
-
-In this screenshot, I’ve changed the Codepad background from `#140e1a` to `#24152d` to improve cursor visibility.  
-An extension is planned to properly handle this across setups.  
-~I’ll also upload the `java-colors.css` file soon—let me know if you’d like a copy~ Maybe I did.
+![Editor Window](assets/Editor%20Window.png)
 
 ### Project View
-<img width="1366" height="768" src="https://github.com/user-attachments/assets/9e37045a-47bb-42d4-8f5e-dc0ade1a54a6" alt="Project Screenshot" />
+![Project View](assets/Project%20View.png)
+
+### Project Menu
+![Project Menu](assets/Project%20menu.png)
+
+### Class Menu
+![Class Menu](assets/Class%20menu.png)
+
+### Selection
+![Selection](assets/Selection.png)
 
 ### Preferences
-<img width="262" height="416" alt="Screenshot From 2025-08-26 17-47-26" src="https://github.com/user-attachments/assets/0a8e647f-774f-402d-8595-675702ffc5cd" />
-<img width="259" height="370" alt="Screenshot From 2025-08-26 17-47-10" src="https://github.com/user-attachments/assets/5fae203e-07e3-42b6-ae42-52e550080e5d" />
-<img width="245" height="164" src="https://github.com/user-attachments/assets/55cce761-476e-4cb3-8004-6391a44d3cb5" alt="Preferences Screenshot" />
+![Preferences Menu](assets/Preferences%20menu.png)
+
+### Dialogue Windows
+![Dialogue Menu](assets/Dialouge%20menu.png)
+![Dialogue Class Menu](assets/Dialouge%20Class%20menu.png)
+![Dialogue Run](assets/Dialouge%20run.png)
+
+### Method Calling
+![Method Calling](assets/mathod%20calling.png)
 
 ### Terminal
-<img width="1366" height="768" alt="Screenshot From 2025-10-08 10-33-58" src="https://github.com/user-attachments/assets/335459db-9b15-420c-9d11-3ff494632751" />
-<img width="1366" height="768" alt="Screenshot From 2025-10-08 10-40-57" src="https://github.com/user-attachments/assets/4f8b0242-cc4d-40e6-8ae0-051a7e3cd387" />
-
-
-
-
-> I'm still figuring out how to customize the #fffffff part of  terminal colors exactly how I want — help would be appreciated!
-> Maybe I can't 
+![Terminal Showup](assets/Terminal%20Showup.png)
+![Terminal Test](assets/Terminal%20Test.png)
 
 ---
 
@@ -50,22 +51,20 @@ An extension is planned to properly handle this across setups.
 
 ## 🛠️ Installation
 
-1. **Download the theme**  
+1. **Download the theme**
    Click the green **Code** button on this page → **Download ZIP**.
-   >NEWstylesheet.zip for latest 
-   >Old one for default OG 
 
-3. **Locate BlueJ’s stylesheet folder**
+2. **Locate BlueJ's stylesheet folder**
    - **Windows:** `C:\Program Files\BlueJ\lib\stylesheets`
    - **macOS:** Right-click BlueJ → **Show Package Contents** → `Contents/Resources/Java/stylesheets`
    - **Linux:** Usually `/usr/share/bluej/lib/stylesheets`
 
-4. **Replace the files**
-   - Extract the ZIP.  
-   - Copy all `.css` files into the `stylesheets` folder.  
+3. **Replace the files**
+   - Extract the ZIP.
+   - Copy all `.css` files into the `stylesheets` folder.
    - *(Optional but recommended: back up the originals first!)*
 
-5. **Restart BlueJ**  
+4. **Restart BlueJ**
    The dark theme will now be applied.
 
 ---
@@ -79,42 +78,45 @@ An extension is planned to properly handle this across setups.
 
 ## 🎛️ Customization
 
-- The file `java-colors.css` (to be uploaded) will expose editor/Codepad colors you can tweak (e.g., background and cursor visibility).
-- If the cursor is hard to see, try a slightly lighter editor background (e.g., `#24152d`) or adjust the caret color (when available).
+- Edit `java-colors.css` to tweak editor and codepad colors (e.g., background and cursor visibility).
+- If the cursor is hard to see, try a slightly lighter editor background (e.g., `#24152d`) or adjust the caret color.
 
 ---
 
 ## 🔮 Roadmap
 
-- BlueJ extension to override areas that CSS can’t reliably reach (e.g., some cursor and editor behaviors).
+- BlueJ extension to override areas that CSS can't reliably reach (e.g., cursor and editor behaviors).
 - Improved terminal theming.
 - More palette variants (e.g., Storm, Night, Moon).
-
-> Some UI elements may be hardcoded in BlueJ and not fully themeable via CSS alone. The planned extension aims to cover these gaps and deliver a 99% complete theme.
-> Next I will update those mathod calling windows 
 
 ---
 
 ## 🤝 Contributing
 
-Contributions and tips are welcome!  
-- Open an **Issue** for bugs or ideas.  
+Contributions and tips are welcome!
+- Open an **Issue** for bugs or ideas.
 - Submit a **Pull Request** for improvements (CSS tweaks, terminal colors, docs, etc.).
-
-If you know good hooks for terminal colors or How may I change that Cursor Color inside the editor in BlueJ, I’d love your help!
 
 ---
 
 ## ❤️ Acknowledgements
 
-- Thanks to Vickwes as His configs helped me when needed do check his repo out - https://github.com/Vickwes/BlueJ-Dark-Mode
-- Thanks to this Ninja 🥷 https://github.com/WickedKakashi 
-was a silent helper but also the core reason for this matching palettes.. 
+- Thanks to [Vickwes](https://github.com/Vickwes/BlueJ-Dark-Mode) — his configs were a great help.
+- Thanks to [WickedKakashi](https://github.com/WickedKakashi) — a silent helper and the core reason for these matching palettes.
+- Inspired by the **Tokyo Night**, **Catppuccin** and **Ocean Space** palettes.
 
-- Inspired by the **Tokyo Night** , **Catppuccin** and **Ocean Space** palettes.
+## License
+<sub> MIT License — Copyright (c) 2026 **Aayan~** </sub>
 
 ---
+<div align="center">
 
-## 📜 License
+### 🎔 Made with love by [OpalAayan](mailto:YougurtMyFace@proton.me)
 
-This project is open source under the **MIT License**.
+## Star History
+
+[![Star History Chart](https://api.star-history.com/image?repos=OpalAayan/BlueJ-AuraPulse&type=date&legend=top-left)](https://www.star-history.com/?repos=OpalAayan%2FBlueJ-AuraPulse&type=date&legend=top-left)
+
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+
+</div>
