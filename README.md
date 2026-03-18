@@ -2,23 +2,27 @@
 
 A complete, modern dark theme for the BlueJ Java IDE.
 
-Tired of BlueJ's outdated default look? This theme gives BlueJ a fresh, professional dark style inspired by popular palettes like **Tokyo Night**, **Catppuccin** and **Ocean Space**. It's designed for readability, usability, and aesthetics — making coding more enjoyable and less straining on your eyes.
+```Why? I made this```
+**Was Tired of BlueJ feeling so old-school duh!! Meh! So I made this theme for my own sanity~** 
+
+## It features remakes of popular themes like **Tokyo Night**, **Catppuccin**, and **Ocean Space**, mixed with some of my **own custom CSS colors**.
+
+And, Yeah in case **_you care_**
+ It's **designed** for readability, usability, and aesthetics—making coding more enjoyable and less _straining on your eyes_.
 
 ---
 
 ## ✨ Gallery
 
+>Before you dive in for eye candy all of this pics are 720p, and might look better or worse depending on your resolution!
+
+**NOTE - windows navigation buttons are not overwirtten via CSS, its Just hyprland thingy here will look normal in Windows, Macos and other Desktop environment** 
+## **It's all FiraCode Nerd fonts**
 ### Editor Window
 ![Editor Window](assets/Editor%20Window.png)
 
 ### Project View
 ![Project View](assets/Project%20View.png)
-
-### Project Menu
-![Project Menu](assets/Project%20menu.png)
-
-### Class Menu
-![Class Menu](assets/Class%20menu.png)
 
 ### Selection
 ![Selection](assets/Selection.png)
@@ -26,28 +30,29 @@ Tired of BlueJ's outdated default look? This theme gives BlueJ a fresh, professi
 ### Preferences
 ![Preferences Menu](assets/Preferences%20menu.png)
 
+### Project Menu
+![Project Menu](assets/Project%20menu.png)
+
+### Class Menu
+![Class Menu](assets/Class%20menu.png)
+
+
 ### Dialogue Windows
 ![Dialogue Menu](assets/Dialouge%20menu.png)
-![Dialogue Class Menu](assets/Dialouge%20Class%20menu.png)
 ![Dialogue Run](assets/Dialouge%20run.png)
+![Dialogue Class Menu](assets/Dialouge%20Class%20menu.png)
 
 ### Method Calling
 ![Method Calling](assets/mathod%20calling.png)
 
 ### Terminal
 ![Terminal Showup](assets/Terminal%20Showup.png)
+>**The Whiteness that you see here which is left over In terminal!~ Yeah I tried, its hardcoded!**
+### Terminal Runing
 ![Terminal Test](assets/Terminal%20Test.png)
 
 ---
 
-## 🚀 Features
-
-- 🎨 **Comprehensive theming** — Menus, dialogs, buttons, editor, and terminal.
-- 🌙 **Modern dark aesthetics** — Smooth Tokyo Night–inspired palette.
-- 🔍 **Enhanced readability** — Syntax highlighting tuned for clarity.
-- ⚡ **Easy installation** — Just replace a few CSS files.
-
----
 
 ## 🛠️ Installation
 
@@ -57,6 +62,8 @@ Tired of BlueJ's outdated default look? This theme gives BlueJ a fresh, professi
 2. **Locate BlueJ's stylesheet folder**
    - **Windows:** `C:\Program Files\BlueJ\lib\stylesheets`
    - **macOS:** Right-click BlueJ → **Show Package Contents** → `Contents/Resources/Java/stylesheets`
+   
+   >Tbh, Not sure for macOS, Please let me
    - **Linux:** Usually `/usr/share/bluej/lib/stylesheets`
 
 3. **Replace the files**
@@ -69,25 +76,35 @@ Tired of BlueJ's outdated default look? This theme gives BlueJ a fresh, professi
 
 ---
 
-## ♻️ Uninstall / Revert
+## Uninstall / Revert
 
 - Replace the modified `.css` files with your backups, **or**
 - Reinstall BlueJ to restore the default styles.
 
 ---
 
-## 🎛️ Customization
+## Customization
 
-- Edit `java-colors.css` to tweak editor and codepad colors (e.g., background and cursor visibility).
-- If the cursor is hard to see, try a slightly lighter editor background (e.g., `#24152d`) or adjust the caret color.
+- Edit `java-colors.css` to tweak editor and codepad colors (e.g., background and cursor visibility). 
+- If you want like a Underline cursor. here you go! this will go inside `flow.css`
+```
+/* --- For Underline ---*/
+ .flow-caret {
+    -fx-stroke-width: 16px; 
+    -fx-stroke-line-cap: butt;
+    -fx-stroke: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0) 92%, 
+        #F7AFFF 90%,   
+        #F7AFFF 100%   
+    );
+  -fx-effect: dropshadow(three-pass-box, rgba(203, 166, 247, 0.7), 12, 0.3, 0, 0);
+}
 
----
+``` 
+>Play with it, I mean its just a Css trick BlueJ doesn't have a Underline Cursor
 
-## 🔮 Roadmap
-
-- BlueJ extension to override areas that CSS can't reliably reach (e.g., cursor and editor behaviors).
-- Improved terminal theming.
-- More palette variants (e.g., Storm, Night, Moon).
 
 ---
 
