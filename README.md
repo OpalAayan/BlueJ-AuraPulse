@@ -8,7 +8,7 @@ A complete, modern dark theme for the BlueJ Java IDE.
 ## It features remakes of popular themes like **Tokyo Night**, **Catppuccin**, and **Ocean Space**, mixed with some of my **own custom CSS colors**.
 
 And, Yeah in case **_you care_**
- It's **designed** for readability, usability, and aesthetics—making coding more enjoyable and less _straining on your eyes_.
+ It's **designed** for readability, usability, and aesthetics making coding more enjoyable and less _straining on your eyes_.
 
 ---
 
